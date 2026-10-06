@@ -3,6 +3,7 @@
 import type { SyntheticEvent } from "react";
 import TopNav from "../defaults/TopNav";
 import HeroMarquee from "./HeroMarquee";
+import ScrollDown from "./ScrollDown";
 
 const resumeVideo = (event: SyntheticEvent<HTMLVideoElement>) => {
   const video = event.currentTarget;
@@ -57,6 +58,7 @@ const Hero = () => {
               Explore our portfolio
             </button>
           </div>
+          <ScrollDown />
         </div>
       </div>
     </div>
