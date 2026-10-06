@@ -1,3 +1,4 @@
+import PreFooter from "@/components/defaults/PreFooter";
 import AreasOfFocus from "@/components/home/AreasOfFocus";
 import Belief from "@/components/home/Belief";
 import Hero from "@/components/home/Hero";
@@ -13,6 +14,7 @@ const Home = () => {
       <AreasOfFocus />
       <WhatWeDo />
       <Belief />
+      <PreFooter />
     </div>
   );
 };
