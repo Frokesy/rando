@@ -34,7 +34,7 @@ const Mission = () => {
               <span className="text-[#636363] text-[14px]">01</span>
               <MissionSubIconOne />
             </div>
-            <p className="lg:text-[24px] text-[#1A1A1A] mt-10">
+            <p className="lg:text-[24px] text-[18px] text-[#1A1A1A] mt-10">
               Africa&apos;s next generation of globally relevant companies will
               require more than funding. They will require technical depth,
               disciplined capital, strong operating systems and teams prepared
@@ -47,7 +47,7 @@ const Mission = () => {
               <span className="text-[#636363] text-[14px]">02</span>
               <MissionSubIconTwo />
             </div>
-            <p className="lg:text-[24px] text-[#1A1A1A] mt-10">
+            <p className="lg:text-[24px] text-[18px] text-[#1A1A1A] mt-10">
               Ark Capital brings these capabilities together to identify
               opportunities, build businesses and support their long-term
               growth.
