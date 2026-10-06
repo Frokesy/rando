@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, type ReactNode } from "react";
-import { CloseIcon } from "./icons";
+import { CloseIcon } from "../icons";
 
 type DrawerProps = {
   id: string;
@@ -13,7 +13,14 @@ type DrawerProps = {
   children: ReactNode;
 };
 
-export default function Drawer({ id, isOpen, onClose, label, header, children }: DrawerProps) {
+export default function Drawer({
+  id,
+  isOpen,
+  onClose,
+  label,
+  header,
+  children,
+}: DrawerProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const reducedMotion = useReducedMotion();
 
@@ -40,9 +47,11 @@ export default function Drawer({ id, isOpen, onClose, label, header, children }:
       }}
       onClose={onClose}
     >
-      <AnimatePresence onExitComplete={() => {
-        if (!isOpen) dialogRef.current?.close();
-      }}>
+      <AnimatePresence
+        onExitComplete={() => {
+          if (!isOpen) dialogRef.current?.close();
+        }}
+      >
         {isOpen && (
           <motion.div
             key="drawer"
@@ -54,7 +63,12 @@ export default function Drawer({ id, isOpen, onClose, label, header, children }:
           >
             <div className="mb-12 flex items-center justify-between">
               {header}
-              <button type="button" aria-label={`Close ${label.toLowerCase()}`} className="ml-auto flex h-11 w-11 items-center justify-center rounded-full hover:bg-neutral-100" onClick={onClose}>
+              <button
+                type="button"
+                aria-label={`Close ${label.toLowerCase()}`}
+                className="ml-auto flex h-11 w-11 items-center justify-center rounded-full hover:bg-neutral-100"
+                onClick={onClose}
+              >
                 <CloseIcon />
               </button>
             </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState, useSyncExternalStore } from "react";
-import Drawer from "../Drawer";
+import Drawer from "./Drawer";
 import { HamburgerIcon } from "../icons";
 import NavItem from "./NavItem";
 
