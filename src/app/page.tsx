@@ -1,3 +1,4 @@
+import Footer from "@/components/defaults/Footer";
 import PreFooter from "@/components/defaults/PreFooter";
 import AreasOfFocus from "@/components/home/AreasOfFocus";
 import Belief from "@/components/home/Belief";
@@ -17,6 +18,7 @@ const Home = () => {
       <Partner />
       <Belief />
       <PreFooter />
+      <Footer />
     </div>
   );
 };
