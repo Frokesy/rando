@@ -550,3 +550,71 @@ export const FooterLogoMobile = () => (
     </defs>
   </svg>
 );
+
+export const ApproachIcon = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 5.3335C13.1046 5.3335 14 4.43807 14 3.3335C14 2.22893 13.1046 1.3335 12 1.3335C10.8954 1.3335 10 2.22893 10 3.3335C10 4.43807 10.8954 5.3335 12 5.3335Z"
+      stroke="#636363"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M4 14.6665C5.10457 14.6665 6 13.7711 6 12.6665C6 11.5619 5.10457 10.6665 4 10.6665C2.89543 10.6665 2 11.5619 2 12.6665C2 13.7711 2.89543 14.6665 4 14.6665Z"
+      stroke="#1A1A1A"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M7.99999 3.3335H5.66666C4.37799 3.3335 3.33333 4.37816 3.33333 5.66683C3.33333 6.9555 4.37799 8.00016 5.66666 8.00016H10.3333C11.622 8.00016 12.6667 9.04483 12.6667 10.3335C12.6667 11.6222 11.622 12.6668 10.3333 12.6668H7.99999"
+      stroke="#1A1A1A"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const DiscoverIcon = () => (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M10 18.3335C14.1421 18.3335 17.5 14.9756 17.5 10.8335C17.5 6.69136 14.1421 3.3335 10 3.3335C5.85786 3.3335 2.5 6.69136 2.5 10.8335C2.5 14.9756 5.85786 18.3335 10 18.3335Z"
+      stroke="white"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+    />
+    <path
+      d="M10 2.9165V1.6665"
+      stroke="white"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M8.33333 1.6665H11.6667"
+      stroke="white"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M12.3107 8.54774C12.9218 9.15324 11.944 14.0779 10.9408 14.1647C10.0991 14.2375 9.83676 12.5775 9.65951 12.0513C9.48459 11.5321 9.28984 11.3451 8.77484 11.1747C7.46658 10.7419 6.81244 10.5255 6.68292 10.1828C6.33997 9.27549 11.5302 7.77434 12.3107 8.54774Z"
+      stroke="white"
+      strokeWidth="1.25"
+    />
+  </svg>
+);
