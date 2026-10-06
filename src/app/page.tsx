@@ -1,4 +1,5 @@
 import AreasOfFocus from "@/components/home/AreasOfFocus";
+import Belief from "@/components/home/Belief";
 import Hero from "@/components/home/Hero";
 import Mission from "@/components/home/Mission";
 import WhatWeDo from "@/components/home/WhatWeDo";
@@ -11,6 +12,7 @@ const Home = () => {
       <Mission />
       <AreasOfFocus />
       <WhatWeDo />
+      <Belief />
     </div>
   );
 };
