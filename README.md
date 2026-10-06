@@ -1,4 +1,4 @@
-# Rando
+# Ark Capital
 
 Next.js App Router project with TypeScript, Tailwind CSS, ESLint, Framer Motion, and GSAP.
 
@@ -50,3 +50,9 @@ export function FadeIn({ children }: { children: React.ReactNode }) {
 ```
 
 Import GSAP with `import { gsap } from "gsap"`. Initialize animations in a React effect and use `gsap.context()` with `context.revert()` on cleanup. Respect reduced-motion preferences when adding animations.
+
+## Brand and theme
+
+Metadata and social preview text use Ark Capital. The favicon uses the symbol from the supplied logo. Set the production domain for `metadataBase`, canonical URLs, and a sitemap once the domain is confirmed, and refine the description when the company positioning is available.
+
+The theme follows the device's `prefers-color-scheme` setting, with light mode as the fallback. Tailwind's `dark:` utilities use the same device setting. Use `logo-black.svg` on light backgrounds and `logo-white.svg` on dark backgrounds.
