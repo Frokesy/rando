@@ -124,32 +124,30 @@ export default function CapabilitiesPage() {
   return (
     <>
       <TopNav theme="dark" />
-      <main className="mx-auto w-[90%] pt-4 lg:w-[80%] lg:mt-20 mt-10">
-        <div className="top lg:pb-20 pb-10">
-          <div className="flex items-center space-x-2">
-            <MissionSubIconOne />
-            <p className="text-[14px] text-[#636363]">Capabilities</p>
-          </div>
-          <h2 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
-            The capabilities required to turn ideas into institutions.
-          </h2>
-          <p className="text-[#636363] lg:mt-0 mt-2">
-            Ark Capital provides more than financing. We bring together the
-            strategic, technical, financial and operational capabilities
-            required to build enduring companies.
-          </p>
-          <button className="bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
-            Work with us
-          </button>
-
-          <Image
-            src="/capabilities/capabilities-hero.png"
-            alt="hero-img"
-            width={1120}
-            height={480}
-            className="w-full h-full mt-10 rounded-xl"
-          />
+      <main className="mx-auto w-[90%] pt-4 lg:w-[80%] lg:mt-20 mt-10 top lg:pb-20 pb-10">
+        <div className="flex items-center space-x-2">
+          <MissionSubIconOne />
+          <p className="text-[14px] text-[#636363]">Capabilities</p>
         </div>
+        <h2 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
+          The capabilities required to turn ideas into institutions.
+        </h2>
+        <p className="text-[#636363] lg:mt-0 mt-2">
+          Ark Capital provides more than financing. We bring together the
+          strategic, technical, financial and operational capabilities required
+          to build enduring companies.
+        </p>
+        <button className="bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
+          Work with us
+        </button>
+
+        <Image
+          src="/capabilities/capabilities-hero.png"
+          alt="hero-img"
+          width={1120}
+          height={480}
+          className="w-full h-full mt-10 rounded-xl"
+        />
       </main>
       <div className="bg-[#F8F7F5] lg:py-20 py-10">
         <div className="w-[90%] lg:w-[80%] mx-auto lg:space-y-10 space-y-6">
