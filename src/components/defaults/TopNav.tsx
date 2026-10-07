@@ -10,10 +10,10 @@ import NavItem from "./NavItem";
 
 const links = [
   { label: "Home", href: "/" },
-  { label: "Company", href: "/#company" },
-  { label: "Capabilities", href: "/#capabilities" },
-  { label: "Portfolio", href: "/#portfolio" },
-  { label: "Insights", href: "/#insights" },
+  { label: "Company", href: "/company" },
+  { label: "Capabilities", href: "/capabilities" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Insights", href: "/insights" },
 ];
 
 function subscribeToLocation(callback: () => void) {
@@ -25,7 +25,10 @@ function subscribeToLocation(callback: () => void) {
   };
 }
 
-const TopNav = () => {
+type TopNavProps = { theme?: "light" | "dark" };
+
+const TopNav = ({ theme = "light" }: TopNavProps) => {
+  const dark = theme === "dark";
   const [isOpen, setIsOpen] = useState(false);
   const [selectedHref, setSelectedHref] = useState<string | null>(null);
   const pathname = usePathname();
@@ -62,10 +65,10 @@ const TopNav = () => {
   };
 
   return (
-    <>
-      <div className="flex justify-between items-center lg:w-[80%] mx-auto px-6 my-6">
+    <div>
+      <div className="flex justify-between items-center lg:w-[80%] w-[90%] mx-auto my-6">
         <Image
-          src="/logo-white.svg"
+          src={dark ? "/logo-black.svg" : "/logo-white.svg"}
           width={100}
           height={100}
           alt="Ark Capital Logo"
@@ -79,6 +82,7 @@ const TopNav = () => {
                   label={label}
                   active={activeHref === href}
                   variant="desktop"
+                  theme={theme}
                   onSelect={() => selectLink(href)}
                 />
               </li>
@@ -87,7 +91,7 @@ const TopNav = () => {
         </nav>
         <Link
           href="/#contact"
-          className="bg-white text-black px-6 py-2 lg:block hidden rounded-full hover:bg-gray-200 text-[14px]"
+          className={`px-6 py-2 lg:block hidden rounded-full text-[14px] transition-colors ${dark ? "bg-black text-white hover:bg-neutral-800" : "bg-white text-black hover:bg-gray-200"}`}
           onClick={() => selectLink("/#contact")}
         >
           Contact Us
@@ -101,7 +105,7 @@ const TopNav = () => {
           aria-haspopup="dialog"
           onClick={() => setIsOpen(true)}
         >
-          <HamburgerIcon />
+          <HamburgerIcon color={dark ? "black" : "white"} />
         </button>
       </div>
       <Drawer
@@ -146,7 +150,7 @@ const TopNav = () => {
           </ul>
         </nav>
       </Drawer>
-    </>
+    </div>
   );
 };
 
