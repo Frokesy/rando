@@ -91,7 +91,7 @@ export const ArrowDownIcon = () => (
   </svg>
 );
 
-export const MissionIcon = () => (
+export const MissionIcon = ({ color }: { color?: string }) => (
   <svg
     width="16"
     height="16"
@@ -101,19 +101,19 @@ export const MissionIcon = () => (
   >
     <path
       d="M11.3333 7.99996C11.3333 9.84089 9.84094 11.3333 8 11.3333C6.15906 11.3333 4.66667 9.84089 4.66667 7.99996C4.66667 6.15901 6.15906 4.66663 8 4.66663"
-      stroke="#636363"
+      stroke={color ?? "#636363"}
       strokeWidth="1.5"
       strokeLinecap="round"
     />
     <path
       d="M9.33333 1.46667C8.90253 1.37922 8.45659 1.33331 7.99999 1.33331C4.31809 1.33331 1.33333 4.31808 1.33333 7.99998C1.33333 11.6818 4.31809 14.6666 7.99999 14.6666C11.6819 14.6666 14.6667 11.6818 14.6667 7.99998C14.6667 7.54338 14.6207 7.09745 14.5333 6.66665"
-      stroke="#1A1A1A"
+      stroke={color ?? "#1A1A1A"}
       strokeWidth="1.5"
       strokeLinecap="round"
     />
     <path
       d="M8.0202 7.97499L11.0555 4.93972M13.1603 2.8964L12.7915 1.57164C12.7235 1.3534 12.4609 1.26642 12.2839 1.41107C11.3265 2.19344 10.2836 3.24726 11.1353 4.90945C12.8514 5.70969 13.8311 4.63055 14.5822 3.72352C14.7317 3.54306 14.6415 3.27177 14.4165 3.20669L13.1603 2.8964Z"
-      stroke="#1A1A1A"
+      stroke={color ?? "#1A1A1A"}
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -121,7 +121,7 @@ export const MissionIcon = () => (
   </svg>
 );
 
-export const MissionSubIconOne = () => (
+export const MissionSubIconOne = ({ color }: { color?: string }) => (
   <svg
     width="20"
     height="20"
@@ -131,21 +131,21 @@ export const MissionSubIconOne = () => (
   >
     <path
       d="M7.20248 2.62128L5.7818 3.27798C3.59393 4.28928 2.5 4.79493 2.5 5.62496C2.5 6.45498 3.59393 6.96063 5.78181 7.97194L7.20248 8.62863C8.57933 9.26504 9.26783 9.58329 10 9.58329C10.7322 9.58329 11.4207 9.26504 12.7975 8.62863L14.2182 7.97194C16.4061 6.96063 17.5 6.45498 17.5 5.62496C17.5 4.79493 16.4061 4.28928 14.2182 3.27798L12.7975 2.62128C11.4207 1.98484 10.7322 1.66663 10 1.66663C9.26783 1.66663 8.57933 1.98484 7.20248 2.62128Z"
-      stroke="#1A1A1A"
+      stroke={color ?? "#1A1A1A"}
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M17.3233 9.24768C17.4411 9.41326 17.5 9.58593 17.5 9.77576C17.5 10.5939 16.4061 11.0924 14.2182 12.0893L12.7975 12.7367C11.4207 13.364 10.7322 13.6778 10 13.6778C9.26783 13.6778 8.57933 13.364 7.20248 12.7367L5.78181 12.0893C3.59393 11.0924 2.5 10.5939 2.5 9.77576C2.5 9.58593 2.55889 9.41326 2.67667 9.24768"
-      stroke="#1A1A1A"
+      stroke={color ?? "#1A1A1A"}
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M16.9806 13.5551C17.3268 13.8309 17.5 14.1058 17.5 14.4313C17.5 15.2496 16.4061 15.748 14.2182 16.7449L12.7975 17.3922C11.4207 18.0196 10.7322 18.3333 10 18.3333C9.26783 18.3333 8.57933 18.0196 7.20248 17.3922L5.78181 16.7449C3.59393 15.748 2.5 15.2496 2.5 14.4313C2.5 14.1058 2.67315 13.8309 3.01945 13.5551"
-      stroke="#1A1A1A"
+      stroke={color ?? "#1A1A1A"}
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -736,5 +736,11 @@ export const MiniLogo = () => (
         <rect width="19.2" height="16" fill="white" />
       </clipPath>
     </defs>
+  </svg>
+);
+
+export const ScaleIcon = ({ color = "currentColor" }: { color?: string }) => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+    <path d="M3 17V12M8 17V9M13 17V6M2.5 8.5 8 5l3 1.5L17 2.5M13 2.5h4v4" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
