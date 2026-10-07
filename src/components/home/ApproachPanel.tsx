@@ -1,28 +1,37 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { DiscoverIcon, MissionIcon, MissionSubIconOne, ScaleIcon } from "../icons";
+import {
+  DiscoverIcon,
+  MissionIcon,
+  MissionSubIconOne,
+  ScaleIcon,
+} from "../icons";
 
 const phases = [
   {
     title: "Discover",
     icon: <DiscoverIcon />,
-    description: "We identify important problems, market gaps and technical teams with a credible advantage.",
+    description:
+      "We identify important problems, market gaps and technical teams with a credible advantage.",
   },
   {
     title: "Assess",
     icon: <MissionIcon color="white" />,
-    description: "We evaluate the product, market, business model, technology and execution capacity.",
+    description:
+      "We evaluate the product, market, business model, technology and execution capacity.",
   },
   {
     title: "Build",
     icon: <MissionSubIconOne color="white" />,
-    description: "We work alongside the team to develop the product, operating structures, financial model and commercial strategy.",
+    description:
+      "We work alongside the team to develop the product, operating structures, financial model and commercial strategy.",
   },
   {
     title: "Scale",
     icon: <ScaleIcon color="white" />,
-    description: "We support capital planning, partnerships, institutional growth, governance and expansion.",
+    description:
+      "We support capital planning, partnerships, institutional growth, governance and expansion.",
   },
 ];
 
@@ -98,8 +107,12 @@ export default function ApproachPanel({
               }}
             >
               <span className="flex items-center gap-2">
-                <span className="inline-flex shrink-0" aria-hidden="true">{content.icon}</span>
-                <span className="text-xl font-semibold lg:text-2xl">{content.title}</span>
+                <span className="inline-flex shrink-0" aria-hidden="true">
+                  {content.icon}
+                </span>
+                <span className="text-xl font-semibold lg:text-2xl">
+                  {content.title}
+                </span>
               </span>
               <span className="mt-2 block text-sm text-white/55">
                 {content.description}
