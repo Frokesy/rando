@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ArticleBrowser from "@/components/insights/ArticleBrowser";
 import TopNav from "@/components/defaults/TopNav";
 import {
@@ -24,6 +25,9 @@ const Insights = () => {
       dateTime: "8 September 2026 · 2 min read",
       title: "Applying AI where it changes decisions",
       img: "/capabilities/img-three.png",
+      href: "/insights/applying-ai-where-it-changes-decisions",
+      excerpt:
+        "Artificial intelligence creates value when it is connected to a real decision, a real workflow and someone accountable for the outcome.",
     },
     {
       id: 2,
@@ -32,6 +36,9 @@ const Insights = () => {
       dateTime: "25 August 2026 · 2 min read",
       title: "What venture building adds beyond capital",
       img: "/capabilities/capabilities-hero.png",
+      href: "/insights/what-venture-building-adds-beyond-capital",
+      excerpt:
+        "Capital is necessary but rarely sufficient. Early companies also need technical depth, operating systems and the right relationships at the right time.",
     },
     {
       id: 3,
@@ -40,6 +47,9 @@ const Insights = () => {
       dateTime: "11 August 2026 · 2 min read",
       title: "Discipline before automation in systematic research",
       img: "/capabilities/img-six.png",
+      href: "/insights/discipline-before-automation-in-systematic-research",
+      excerpt:
+        "Automated execution is the last step of a quantitative workflow, not the first. The work that comes before it determines whether a strategy deserves capital.",
     },
     {
       id: 4,
@@ -48,6 +58,9 @@ const Insights = () => {
       dateTime: "28 July 2026 · 2 min read",
       title: "Infrastructure first: the systems growing business depend on",
       img: "/capabilities/img-five.png",
+      href: "/insights/infrastructure-first-the-systems-growing-business-depend-on",
+      excerpt:
+        "Platforms, data systems and operational tools rarely make headlines. They are what allow a business to grow without losing control of its operations.",
     },
     {
       id: 5,
@@ -56,6 +69,9 @@ const Insights = () => {
       dateTime: "14 July 2026 · 2 min read",
       title: "Separating durable Web3 infrastructure from speculation",
       img: "/portfolio-hero.png",
+      href: "/insights/separating-durable-web3-infrastructure-from-speculation",
+      excerpt:
+        "Beyond market cycles, some blockchain-based systems are solving real problems in settlement, verification and ownership. The question is how to tell them apart.",
     },
     {
       id: 6,
@@ -64,6 +80,9 @@ const Insights = () => {
       dateTime: "30 June 2026 · 2 min read",
       title: "Building globally relevant technologies from Africa",
       img: "/capabilities/img-two.png",
+      href: "/insights/building-globally-relevant-technologies-from-africa",
+      excerpt:
+        "Technology has repeatedly transformed how Africans communicate, transact and build. The next phase should include more of those systems being built and controlled from Africa.",
     },
     {
       id: 7,
@@ -72,6 +91,9 @@ const Insights = () => {
       dateTime: "16 June 2026 · 2 min read",
       title: "How we assess an opportunity before we build",
       img: "/capabilities/img-one.png",
+      href: "/insights/how-we-assess-an-opportunity-before-we-build",
+      excerpt:
+        "Before any capital or effort is committed, we look closely at the problem, the market, the business model and the team's ability to execute.",
     },
   ];
   return (
@@ -109,7 +131,12 @@ const Insights = () => {
           <div className="mt-auto w-full min-w-0 space-y-4 text-white lg:w-[60%]">
             <span className="text-[13px]">22 September 2026 · 2 min read </span>
             <h2 className="text-[26px] leading-tight font-semibold sm:text-[32px] lg:text-[40px]">
-              Building payment infrastructure that institutions can trust
+              <Link
+                href="/insights/building-payment-infrastructure-that-institutions-can-trust"
+                className="after:absolute after:inset-0 after:rounded-xl focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-white"
+              >
+                Building payment infrastructure that institutions can trust
+              </Link>
             </h2>
             <p className="text-[14px] leading-relaxed sm:text-base">
               Reliable payments, collections and reporting are not features to

@@ -93,7 +93,7 @@ const Contact = () => {
                 ))}
               </div>
               <div className="">
-                <button className="bg-white text-black mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
+                <button className="bg-white text-black mt-6 text-[14px] py-2 px-4 rounded-full">
                   Submit a venture
                 </button>
               </div>

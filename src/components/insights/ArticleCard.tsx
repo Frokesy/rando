@@ -1,7 +1,9 @@
+import Link from "next/link";
 import type { ReactNode } from "react";
 
 type Article = {
   id: number;
+  href: string;
   categoryIcon: ReactNode;
   category: string;
   dateTime: string;
@@ -32,7 +34,7 @@ export default function ArticleCard({ article }: { article: Article }) {
       <div className="mt-12 space-y-4">
         <p className="text-[13px] text-white/80">{article.dateTime}</p>
         <h3 className="text-2xl font-semibold leading-tight lg:text-3xl">
-          {article.title}
+          <Link href={article.href} className="after:absolute after:inset-0 after:rounded-xl focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-white">{article.title}</Link>
         </h3>
       </div>
     </article>
