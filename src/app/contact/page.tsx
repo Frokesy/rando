@@ -16,10 +16,10 @@ import {
 } from "@/components/icons";
 import React from "react";
 
-export const metadata = pageMetadata("Contact", "Contact Ark Capital to introduce your company, explore a partnership or discuss an investor or general enquiry.", "/contact");
+export const metadata=pageMetadata("Contact","Contact Ark Capital to introduce your company, explore a partnership or discuss an investor or general enquiry.","/contact");
 
-const Contact = () => {
-  const categories = [
+const Contact=() => {
+  const categories=[
     {
       id: 1,
       icon: <PortfolioIconTwo />,
@@ -50,19 +50,19 @@ const Contact = () => {
       <TopNav theme="dark" />
       <main className="mx-auto w-[90%] pt-4 lg:w-[80%] lg:mt-20 mt-10 top lg:pb-20 pb-10">
         <RevealItem independent>
-        <div className="flex items-center space-x-2">
-          <ContactIconOne />
-          <p className="text-[14px] text-[#636363]">Contact</p>
-        </div>
-        <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
-          Start a conversation
-        </h1>
-        <p className="text-[#636363] lg:mt-0 mt-2">
-          Whether you are building a company, exploring a partnership or
-          interested in working with us, we would like to hear from you.
-        </p>
-              </RevealItem>
-</main>
+          <div className="flex items-center space-x-2">
+            <ContactIconOne />
+            <p className="text-[14px] text-[#636363]">Contact</p>
+          </div>
+          <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
+            Start a conversation
+          </h1>
+          <p className="text-[#636363] lg:mt-0 mt-2">
+            Whether you are building a company, exploring a partnership or
+            interested in working with us, we would like to hear from you.
+          </p>
+        </RevealItem>
+      </main>
 
       <div className="bg-[#F8F7F5] lg:py-20 py-10">
         <div className="lg:w-[80%] w-[90%] mx-auto">
@@ -93,7 +93,7 @@ const Contact = () => {
                   "Evidence of execution",
                   "Openness to close operational collaboration",
                   "The ambition to build a globally relevant company",
-                ].map((item, index) => (
+                ].map((item,index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <Checkmark color="#7FE3F2" />
                     <span className="text-[15px]">{item}</span>

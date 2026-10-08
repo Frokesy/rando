@@ -11,9 +11,9 @@ import Partner from "@/components/home/Partner";
 import WhatWeDo from "@/components/home/WhatWeDo";
 import React from "react";
 
-export const metadata = pageMetadata("Ark Capital", "Ark Capital combines research, capital, technology and hands-on execution to build globally relevant businesses and financial systems from Africa.", "/");
+export const metadata=pageMetadata("Ark Capital","Ark Capital combines research, capital, technology and hands-on execution to build globally relevant businesses and financial systems from Africa.","/");
 
-const Home = () => {
+const Home=() => {
   return (
     <div>
       <Hero />

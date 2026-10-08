@@ -1,14 +1,14 @@
 import Image from "next/image";
 import RevealItem from "../RevealItem";
 
-type WhatWeDoCardProps = {
+type WhatWeDoCardProps={
   title: string;
   icon: string;
   description: string;
   delay?: number;
 };
 
-export default function WhatWeDoCard({ title, icon, description, delay = 0 }: WhatWeDoCardProps) {
+export default function WhatWeDoCard({ title,icon,description,delay=0 }: WhatWeDoCardProps) {
   return (
     <RevealItem independent delay={delay} className="h-full">
       <article className="flex h-full flex-col rounded-xl bg-white p-6 lg:p-8">

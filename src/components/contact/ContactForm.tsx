@@ -15,7 +15,7 @@ export default function ContactForm({ categories, initialCategory }: { categorie
   return (
     <form className="space-y-6" onSubmit={(event) => {
       event.preventDefault();
-      setStatus("Message delivery is currently unavailable. Please try again later.");
+      setStatus("Message delivery is not connected yet. Your enquiry has not been sent.");
     }}>
       <fieldset>
         <legend className="mb-4">What would you like to discuss? (required)</legend>
@@ -48,7 +48,7 @@ export default function ContactForm({ categories, initialCategory }: { categorie
         <p id={`${id}-hint`} className="mt-2 text-sm text-[#636363]">Tell us briefly about your company partnership or enquiry.</p>
       </div>
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-[#636363]">By submitting this form you agree to our <ConfiguredLink href={externalLinks.privacyPolicy} className="underline underline-offset-2">privacy policy</ConfiguredLink>.</p>
+        <p className="text-sm text-[#636363]">By sending your enquiry you agree to our <ConfiguredLink href={externalLinks.privacyPolicy} className="underline underline-offset-2">privacy policy</ConfiguredLink>.</p>
         <button type="submit" className="shrink-0 rounded-full bg-black px-6 py-3 text-sm text-white transition-colors hover:bg-neutral-800">Send a message</button>
       </div>
       <p role="status" className="text-sm text-[#636363]">{status}</p>

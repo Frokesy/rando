@@ -7,7 +7,7 @@ import {
   MissionSubIconTwo,
 } from "../icons";
 
-const Mission = () => {
+const Mission=() => {
   return (
     <div className="bg-[#F8F7F5]">
       <StaggerReveal duration={0.45} stagger={0.1} className="lg:w-[80%] w-[90%] mx-auto lg:py-20 py-10">

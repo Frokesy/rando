@@ -1,11 +1,11 @@
 import Link from "next/link";
 import StaggerReveal from "../StaggerReveal";
 import RevealItem from "../RevealItem";
-import { RightArrowIcon, WhatWeDoIcon } from "../icons";
+import { RightArrowIcon,WhatWeDoIcon } from "../icons";
 import WhatWeDoCard from "./WhatWeDoCard";
 
-const WhatWeDo = () => {
-  const whatWeDo = [
+const WhatWeDo=() => {
+  const whatWeDo=[
     {
       id: 1,
       title: "Research and Investment",
@@ -63,16 +63,16 @@ const WhatWeDo = () => {
           </Link></RevealItem>
         </StaggerReveal>
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-20 lg:grid-cols-3">
-          {whatWeDo.map((item, index) => (
+          {whatWeDo.map((item,index) => (
             <WhatWeDoCard
               key={item.id}
               title={item.title}
               icon={item.icon}
               description={item.description}
-              delay={index * 0.1}
+              delay={index*0.1}
             />
           ))}
-          <RevealItem independent delay={whatWeDo.length * 0.1} className="min-h-64 rounded-xl bg-[#1A1A1A] text-white">
+          <RevealItem independent delay={whatWeDo.length*0.1} className="min-h-64 rounded-xl bg-[#1A1A1A] text-white">
             <div className="h-full p-6 lg:p-8 flex flex-col justify-between space-y-6">
               <div className="">
                 <h2 className="text-[20px] font-semibold">Capabilities</h2>

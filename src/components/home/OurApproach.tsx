@@ -4,7 +4,7 @@ import RevealItem from "../RevealItem";
 import { ApproachIcon } from "../icons";
 import ApproachPanels from "./ApproachPanels";
 
-const OurApproach = () => {
+const OurApproach=() => {
   return (
     <div className="bg-[#F8F7F5]">
       <StaggerReveal className="lg:w-[80%] w-[90%] mx-auto lg:py-30 py-20">

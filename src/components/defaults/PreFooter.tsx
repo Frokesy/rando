@@ -3,7 +3,7 @@ import RevealItem from "../RevealItem";
 import Link from "next/link";
 import Image from "next/image";
 
-const PreFooter = () => {
+const PreFooter=() => {
   return (
     <div className="bg-white lg:py-30 py-20 flex lg:flex-row flex-col justify-between items-center lg:space-y-0 space-y-10 lg:space-x-10 lg:w-[80%] w-[90%] mx-auto">
       <RevealItem independent className="lg:w-[50%] w-full">

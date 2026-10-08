@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CPIcon } from "../icons";
 
-const Partner = () => {
+const Partner=() => {
   return (
     <StaggerReveal duration={0.45} stagger={0.1} className="bg-[#1A1A1A] lg:py-30 py-20">
       <div className="lg:w-[80%] w-[90%] mx-auto flex lg:flex-row flex-col justify-between items-center lg:space-y-0 space-y-10 lg:space-x-10 text-white">
