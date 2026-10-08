@@ -1,10 +1,12 @@
+import ImageWipe from "../motion/ImageWipe";
+import RevealItem from "../RevealItem";
 import Link from "next/link";
 import Image from "next/image";
 
 const PreFooter = () => {
   return (
     <div className="bg-white lg:py-30 py-20 flex lg:flex-row flex-col justify-between items-center lg:space-y-0 space-y-10 lg:space-x-10 lg:w-[80%] w-[90%] mx-auto">
-      <div className="lg:w-[50%] w-full">
+      <RevealItem independent className="lg:w-[50%] w-full">
         <Image
           src="/logo-black.svg"
           width={100}
@@ -27,9 +29,8 @@ const PreFooter = () => {
             Submit a venture
           </Link>
         </div>
-      </div>
-
-      <div className="lg:w-[50%] w-full">
+      </RevealItem>
+      <ImageWipe className="lg:w-[50%] w-full">
         <Image
           src="/prefooter.png"
           width={534}
@@ -37,7 +38,7 @@ const PreFooter = () => {
           className="h-auto w-full"
           alt="Ark Capital Prefooter Graphic"
         />
-      </div>
+      </ImageWipe>
     </div>
   );
 };

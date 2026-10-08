@@ -6,6 +6,7 @@ type FocusCardProps = {
   title: string;
   description: string;
   wide?: boolean;
+  delay?: number;
   containVideoOnMobile?: boolean;
 };
 
@@ -14,10 +15,11 @@ export default function FocusCard({
   title,
   description,
   wide = false,
+  delay = 0,
   containVideoOnMobile = false,
 }: FocusCardProps) {
   return (
-    <RevealItem className={wide ? "lg:col-span-3" : "lg:col-span-2"}>
+    <RevealItem independent duration={0.45} delay={delay} className={wide ? "lg:col-span-3" : "lg:col-span-2"}>
       <article className="h-full overflow-hidden rounded-xl bg-[#F8F7F5]">
         <LoopingVideo
           src={video}

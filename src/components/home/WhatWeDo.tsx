@@ -44,24 +44,24 @@ const WhatWeDo = () => {
   ];
   return (
     <div className="bg-[#F8F7F5]">
-      <StaggerReveal className="lg:w-[80%] w-[90%] mx-auto lg:py-30 py-20">
-        <RevealItem className="">
-          <div className="flex items-center space-x-2">
+      <StaggerReveal duration={0.45} stagger={0.1} className="lg:w-[80%] w-[90%] mx-auto lg:py-30 py-20">
+        <StaggerReveal duration={0.45} stagger={0.1} className="">
+          <RevealItem><div className="flex items-center space-x-2">
             <WhatWeDoIcon />
             <p className="text-[14px] text-[#636363]">What We Do</p>
-          </div>
-          <h2 className="font-semibold lg:text-[56px] text-[34px] lg:mt-0 mt-3">
+          </div></RevealItem>
+          <RevealItem><h2 className="font-semibold lg:text-[56px] text-[34px] lg:mt-0 mt-3">
             More than capital
-          </h2>
-          <p className="text-[#636363] my-3">
+          </h2></RevealItem>
+          <RevealItem><p className="text-[#636363] my-3">
             We do not operate as a passive investor. We work closely with
             founders, engineers and operators to turn strong ideas and technical
             capabilities into scalable businesses.
-          </p>
-          <Link href="/contact#enquiry" className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
+          </p></RevealItem>
+          <RevealItem><Link href="/contact#enquiry" className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
             Work with us
-          </Link>
-        </RevealItem>
+          </Link></RevealItem>
+        </StaggerReveal>
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-20 lg:grid-cols-3">
           {whatWeDo.map((item, index) => (
             <WhatWeDoCard
@@ -69,10 +69,10 @@ const WhatWeDo = () => {
               title={item.title}
               icon={item.icon}
               description={item.description}
-              delay={index * 0.18}
+              delay={index * 0.1}
             />
           ))}
-          <RevealItem independent delay={whatWeDo.length * 0.18} className="min-h-64 rounded-xl bg-[#1A1A1A] text-white">
+          <RevealItem independent delay={whatWeDo.length * 0.1} className="min-h-64 rounded-xl bg-[#1A1A1A] text-white">
             <div className="h-full p-6 lg:p-8 flex flex-col justify-between space-y-6">
               <div className="">
                 <h2 className="text-[20px] font-semibold">Capabilities</h2>

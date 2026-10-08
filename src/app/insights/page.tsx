@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/page-metadata";
+import RevealItem from "@/components/RevealItem";
 import Link from "next/link";
 import ArticleBrowser from "@/components/insights/ArticleBrowser";
 import TopNav from "@/components/defaults/TopNav";
@@ -15,6 +17,8 @@ import {
 import React from "react";
 import PreFooter from "@/components/defaults/PreFooter";
 import Footer from "@/components/defaults/Footer";
+
+export const metadata = pageMetadata("Insights", "Read Ark Capital’s research on artificial intelligence, financial technology, venture building and the systems shaping Africa’s next economy.", "/insights", "/capabilities/img-four.png");
 
 const Insights = () => {
   const articles = [
@@ -100,13 +104,14 @@ const Insights = () => {
     <>
       <TopNav theme="dark" />
       <main className="mx-auto w-[90%] pt-4 lg:w-[80%] lg:mt-20 mt-10 top lg:pb-20 pb-10">
+        <RevealItem independent>
         <div className="flex items-center space-x-2">
           <InsightsIcon />
           <p className="text-[14px] text-[#636363]">Insights</p>
         </div>
-        <h2 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
+        <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
           Research for building and investing at the frontier.
-        </h2>
+        </h1>
         <p className="text-[#636363] lg:mt-0 mt-2">
           Our insights examine the technologies, markets and systems shaping the
           future of business and finance in Africa and beyond.
@@ -115,7 +120,8 @@ const Insights = () => {
         <div className="group relative isolate mt-10 flex min-h-100 w-full flex-col justify-between gap-10 overflow-hidden rounded-xl lg:p-5 p-3 transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-xl motion-reduce:transform-none motion-reduce:transition-none sm:p-6 lg:aspect-7/3">
           <div
             aria-hidden="true"
-            className="absolute inset-0 -z-10 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-[1.04] motion-reduce:transform-none motion-reduce:transition-none"
+            data-page-media
+            className="absolute inset-0 -z-10 bg-cover bg-center transition-[transform,filter] duration-700 ease-out group-hover:scale-[1.04] group-hover:blur-[2px] motion-reduce:transform-none motion-reduce:transition-none"
             style={{
               backgroundImage:
                 "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75)), url('/capabilities/img-four.png')",
@@ -154,7 +160,8 @@ const Insights = () => {
         </div>
 
         <ArticleBrowser articles={articles} />
-      </main>
+              </RevealItem>
+</main>
 
       <PreFooter />
       <Footer />

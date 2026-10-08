@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/page-metadata";
+import RevealItem from "@/components/RevealItem";
 import Link from "next/link";
 import ContactEnquiry from "@/components/contact/ContactEnquiry";
 import { Suspense } from "react";
@@ -13,6 +15,8 @@ import {
   TechnicalIcon,
 } from "@/components/icons";
 import React from "react";
+
+export const metadata = pageMetadata("Contact", "Contact Ark Capital to introduce your company, explore a partnership or discuss an investor or general enquiry.", "/contact");
 
 const Contact = () => {
   const categories = [
@@ -45,18 +49,20 @@ const Contact = () => {
     <>
       <TopNav theme="dark" />
       <main className="mx-auto w-[90%] pt-4 lg:w-[80%] lg:mt-20 mt-10 top lg:pb-20 pb-10">
+        <RevealItem independent>
         <div className="flex items-center space-x-2">
           <ContactIconOne />
           <p className="text-[14px] text-[#636363]">Contact</p>
         </div>
-        <h2 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
+        <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
           Start a conversation
-        </h2>
+        </h1>
         <p className="text-[#636363] lg:mt-0 mt-2">
           Whether you are building a company, exploring a partnership or
           interested in working with us, we would like to hear from you.
         </p>
-      </main>
+              </RevealItem>
+</main>
 
       <div className="bg-[#F8F7F5] lg:py-20 py-10">
         <div className="lg:w-[80%] w-[90%] mx-auto">
@@ -76,7 +82,7 @@ const Contact = () => {
           </div>
 
           <div className="mt-6 flex flex-col items-stretch gap-4 lg:flex-row">
-            <div className="flex w-full min-w-0 flex-col bg-[#1A1A1A] lg:p-6 p-4 rounded-lg text-white lg:w-[55%]">
+            <RevealItem independent className="flex w-full min-w-0 flex-col bg-[#1A1A1A] lg:p-6 p-4 rounded-lg text-white lg:w-[55%]">
               <PortfolioIconTwo color="white" />
               <h2 className="mt-4 text-[20px]">Founders and technical teams</h2>
               <p className="text-[15px] mt-1">We work with teams that have:</p>
@@ -99,9 +105,9 @@ const Contact = () => {
                   Submit a venture
                 </Link>
               </div>
-            </div>
+            </RevealItem>
 
-            <div className="w-full min-w-0 bg-white flex flex-col justify-between lg:p-6 p-4 rounded-lg lg:w-[45%] lg:min-h-80">
+            <RevealItem independent className="w-full min-w-0 bg-white flex flex-col justify-between lg:p-6 p-4 rounded-lg lg:w-[45%] lg:min-h-80">
               <div className="">
                 <GrowthIcon />
                 <h2 className="text-[20px] mt-2">
@@ -119,11 +125,11 @@ const Contact = () => {
                   Speak with our team
                 </Link>
               </div>
-            </div>
+            </RevealItem>
           </div>
 
           <div className="mt-6 flex flex-col items-stretch gap-4 lg:flex-row">
-            <div className="w-full min-w-0 bg-white flex flex-col justify-between lg:p-6 p-4 rounded-lg lg:w-[45%] lg:min-h-80">
+            <RevealItem independent className="w-full min-w-0 bg-white flex flex-col justify-between lg:p-6 p-4 rounded-lg lg:w-[45%] lg:min-h-80">
               <div className="">
                 <CompanyIcon />
                 <h2 className="text-[20px] mt-2">Companies and institutions</h2>
@@ -139,9 +145,9 @@ const Contact = () => {
                   Start a Conversation
                 </Link>
               </div>
-            </div>
+            </RevealItem>
 
-            <div className="flex w-full min-w-0 flex-col justify-between bg-white lg:p-6 p-4 rounded-lg text-black lg:w-[55%] lg:min-h-80">
+            <RevealItem independent className="flex w-full min-w-0 flex-col justify-between bg-white lg:p-6 p-4 rounded-lg text-black lg:w-[55%] lg:min-h-80">
               <div className="">
                 <TechnicalIcon />
                 <h2 className="text-[20px] mt-2">
@@ -159,13 +165,13 @@ const Contact = () => {
                   Partner with Ark
                 </Link>
               </div>
-            </div>
+            </RevealItem>
           </div>
         </div>
       </div>
 
       <div id="enquiry" className="scroll-mt-6 lg:w-[80%] w-[90%] mx-auto lg:py-20 py-10 flex flex-col gap-8 lg:flex-row lg:justify-between lg:gap-10">
-        <div className="w-full min-w-0 lg:w-[40%]">
+        <RevealItem independent className="w-full min-w-0 lg:w-[40%]">
           <div className="flex items-center space-x-2">
             <ContactIconOne />
             <p className="text-[14px] text-[#636363]">Enquiry</p>
@@ -173,13 +179,13 @@ const Contact = () => {
           <h2 className="font-semibold lg:text-[56px] text-[34px] lg:mt-0 mt-3">
             Contact Categories
           </h2>
-        </div>
+        </RevealItem>
 
-        <div className="w-full min-w-0 lg:w-[60%]">
+        <RevealItem independent className="w-full min-w-0 lg:w-[60%]">
           <Suspense fallback={<p>Loading enquiry form…</p>}>
             <ContactEnquiry categories={categories} />
           </Suspense>
-        </div>
+        </RevealItem>
       </div>
 
       <Footer />

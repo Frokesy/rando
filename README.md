@@ -56,3 +56,11 @@ Import GSAP with `import { gsap } from "gsap"`. Initialize animations in a React
 Metadata and social preview text use Ark Capital. The favicon uses the symbol from the supplied logo. Set the production domain for `metadataBase`, canonical URLs, and a sitemap once the domain is confirmed, and refine the description when the company positioning is available.
 
 The theme follows the device's `prefers-color-scheme` setting, with light mode as the fallback. Tailwind's `dark:` utilities use the same device setting. Use `logo-black.svg` on light backgrounds and `logo-white.svg` on dark backgrounds.
+
+## Motion and page metadata
+
+The navigation remains fixed and switches to a white background after 24px of scrolling. Capability cards stack with desktop-only sticky positioning; mobile uses a normal vertical layout. Images outside the home content and the shared PreFooter use a three-second top-to-bottom reveal. All motion components respect reduced-motion preferences.
+
+Route navigation shows the Ark Capital logo while the incoming page and above-fold images become ready, with a bounded wait. This does not wait for every video or below-fold image to download.
+
+Set `NEXT_PUBLIC_SITE_URL` to the confirmed production origin to enable canonical URLs and absolute social preview URLs in the main page metadata.

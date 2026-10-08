@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
+import NavigationTransition from "@/components/motion/NavigationTransition";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -41,7 +42,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={archivo.variable}>
-      <body className="min-h-screen antialiased">{children}</body>
+      <body className="min-h-screen antialiased"><NavigationTransition>{children}</NavigationTransition></body>
     </html>
   );
 }

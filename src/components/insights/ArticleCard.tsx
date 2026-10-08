@@ -18,7 +18,8 @@ export default function ArticleCard({ article }: { article: Article }) {
     <article className="group relative isolate flex lg:h-150 h-100 flex-col justify-between overflow-hidden rounded-xl p-5 text-white transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-xl active:scale-[0.99] motion-reduce:transform-none motion-reduce:transition-none sm:p-6">
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-[1.04] motion-reduce:transform-none motion-reduce:transition-none"
+        data-page-media
+        className="absolute inset-0 -z-10 bg-cover bg-center transition-[transform,filter] duration-700 ease-out group-hover:scale-[1.04] group-hover:blur-[2px] motion-reduce:transform-none motion-reduce:transition-none"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.8)), url('${article.img}')`,
         }}

@@ -1,3 +1,6 @@
+import { pageMetadata } from "@/lib/page-metadata";
+import ImageWipe from "@/components/motion/ImageWipe";
+import RevealItem from "@/components/RevealItem";
 import ConfiguredLink from "@/components/ConfiguredLink";
 import { externalLinks } from "@/config/external-links";
 import Link from "next/link";
@@ -7,35 +10,39 @@ import TopNav from "@/components/defaults/TopNav";
 import { Briefcase, Checkmark, PortfolioIconTwo } from "@/components/icons";
 import Image from "next/image";
 
+export const metadata = pageMetadata("Portfolio", "Discover Ezrah, Ark Quant and the companies and systems Ark Capital builds and supports.", "/portfolio", "/portfolio-hero.png");
+
 const PortfolioPage = () => {
   return (
     <>
       <TopNav theme="dark" />
       <main className="mx-auto w-[90%] pt-4 lg:w-[80%] lg:mt-20 mt-10 top lg:pb-20 pb-10">
+        <RevealItem independent>
         <div className="flex items-center space-x-2">
           <Briefcase />
           <p className="text-[14px] text-[#636363]">Portfolio</p>
         </div>
-        <h2 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
+        <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
           Focused companies. Shared capabilities. Long-term ambition.
-        </h2>
+        </h1>
         <p className="text-[#636363] lg:mt-0 mt-2">
           Our portfolio reflects our belief that specialised teams, disciplined
           execution and connected operating capabilities can produce enduring
           businesses.
         </p>
 
-        <Image
+        <ImageWipe className="mt-10 h-full w-full"><Image
           src="/portfolio-hero.png"
           alt="hero-img"
           width={1120}
           height={480}
-          className="w-full h-full mt-10 rounded-xl"
-        />
-      </main>
+          className="w-full h-auto  rounded-xl"
+        /></ImageWipe>
+              </RevealItem>
+</main>
 
       <div id="ezrah" className="scroll-mt-6 bg-[#F8F7F5] py-20">
-        <div className="lg:w-[80%] w-[90%] mx-auto">
+        <RevealItem independent className="lg:w-[80%] w-[90%] mx-auto">
           <div className="">
             <div className="flex items-center justify-between">
               <h2 className="font-semibold lg:text-[56px] text-[34px]">
@@ -72,8 +79,8 @@ const PortfolioPage = () => {
               Visit Ezrah
             </ConfiguredLink>
           </div>
-        </div>
-        <div className="py-10 lg:w-[80%] w-[90%] mx-auto bg-white p-6 rounded-xl mt-10">
+        </RevealItem>
+        <RevealItem independent className="py-10 lg:w-[80%] w-[90%] mx-auto bg-white p-6 rounded-xl mt-10">
           <h2 className="text-[#8A8A8A] text-[14px]">
             Ark Capital supports Ezrah through:
           </h2>
@@ -96,7 +103,7 @@ const PortfolioPage = () => {
               </div>
             ))}
           </div>
-        </div>
+        </RevealItem>
       </div>
 
       <div

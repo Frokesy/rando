@@ -1,3 +1,5 @@
+import ImageWipe from "../motion/ImageWipe";
+import RevealItem from "../RevealItem";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -38,7 +40,7 @@ export default function ArticleLayout({
           <span>All insights</span>
         </Link>
         <article className="mt-8">
-          <header className="lg:w-[80%] mx-auto">
+          <RevealItem independent className="lg:w-[80%] mx-auto">
             <div className="flex items-center gap-2 text-[#0E2859]">
               <span aria-hidden="true" className="shrink-0 [&_path]:stroke-[#0E2859]"><CategoryIcon category={category} /></span>
               <p className="text-sm font-medium">{category}</p>
@@ -56,8 +58,8 @@ export default function ArticleLayout({
               </div>
               <span>{dateTime}</span>
             </div>
-          </header>
-          <div className="relative mt-10 aspect-video w-full overflow-hidden rounded-xl lg:aspect-auto lg:h-[480px]">
+          </RevealItem>
+          <ImageWipe className="relative mt-10 aspect-video w-full overflow-hidden rounded-xl lg:aspect-auto lg:h-[480px]">
             <Image
               src={image}
               alt={title}
@@ -66,10 +68,10 @@ export default function ArticleLayout({
               sizes="(min-width: 1024px) 80vw, 90vw"
               className="object-cover"
             />
-          </div>
-          <div className="mx-auto mt-10 max-w-3xl space-y-6 text-base leading-8 text-[#3F4044] sm:text-lg [&_h2]:pt-4 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-black [&_ul]:list-disc [&_ul]:pl-6">
+          </ImageWipe>
+          <RevealItem independent className="mx-auto mt-10 max-w-3xl space-y-6 text-base leading-8 text-[#3F4044] sm:text-lg [&_h2]:pt-4 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-black [&_ul]:list-disc [&_ul]:pl-6">
             {children}
-          </div>
+          </RevealItem>
         </article>
       </main>
       <MoreInsights currentTitle={title} />

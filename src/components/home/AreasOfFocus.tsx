@@ -42,21 +42,22 @@ const AreasOfFocus = () => {
     },
   ];
   return (
-    <StaggerReveal className="lg:w-[80%] w-[90%] mx-auto lg:py-30 py-20">
-      <RevealItem className="">
-        <div className="flex items-center space-x-2">
+    <StaggerReveal duration={0.45} stagger={0.1} className="lg:w-[80%] w-[90%] mx-auto lg:py-30 py-20">
+      <StaggerReveal duration={0.45} stagger={0.1} className="">
+        <RevealItem><div className="flex items-center space-x-2">
           <AofIcon />
           <p className="text-[14px] text-[#636363]">Areas of Focus</p>
-        </div>
-        <h2 className="font-semibold lg:text-[56px] text-[34px] lg:mt-0 mt-3">
+        </div></RevealItem>
+        <RevealItem><h2 className="font-semibold lg:text-[56px] text-[34px] lg:mt-0 mt-3">
           Building in markets that will shape the future
-        </h2>
-      </RevealItem>
+        </h2></RevealItem>
+      </StaggerReveal>
 
       <div className="mt-10 grid grid-cols-1 gap-6 lg:mt-20 lg:grid-cols-6">
         {areasOfFocus.map((area, index) => (
           <FocusCard
             key={area.id}
+            delay={(index % 3) * 0.1}
             video={area.vid}
             title={area.title}
             description={area.description}

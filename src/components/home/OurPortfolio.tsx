@@ -12,26 +12,26 @@ import Image from "next/image";
 
 const OurPortfolio = () => {
   return (
-    <StaggerReveal className="lg:w-[80%] w-[90%] mx-auto lg:py-30 py-20">
-      <RevealItem className="">
-        <div className="flex items-center space-x-2">
+    <StaggerReveal duration={0.45} stagger={0.1} className="lg:w-[80%] w-[90%] mx-auto lg:py-30 py-20">
+      <StaggerReveal duration={0.45} stagger={0.1} className="">
+        <RevealItem><div className="flex items-center space-x-2">
           <PortfolioIconOne />
           <p className="text-[14px] text-[#636363]">Portfolio</p>
-        </div>
-        <h2 className="font-semibold lg:text-[56px] text-[34px] lg:mt-0 mt-3">
+        </div></RevealItem>
+        <RevealItem><h2 className="font-semibold lg:text-[56px] text-[34px] lg:mt-0 mt-3">
           Our Portfolio
-        </h2>
-        <p className="text-[#636363] my-3">
+        </h2></RevealItem>
+        <RevealItem><p className="text-[#636363] my-3">
           We build and support focused companies and internal systems that solve
           important operational and financial problems.
-        </p>
-        <Link href="/portfolio" className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
+        </p></RevealItem>
+        <RevealItem><Link href="/portfolio" className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
           Explore our portfolio
-        </Link>
-      </RevealItem>
+        </Link></RevealItem>
+      </StaggerReveal>
 
       <div className="mt-10 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2">
-        <div className="flex min-w-0 flex-col">
+        <RevealItem independent duration={0.45} className="flex min-w-0"><div className="flex min-w-0 flex-1 flex-col">
           <div className="relative z-10 -ml-0.5 -mb-2 flex h-13 w-58 max-w-full shrink-0 items-center px-6">
             <Image
               src="/port-attach-one.svg"
@@ -75,9 +75,9 @@ const OurPortfolio = () => {
               </div>
             </Link>
           </div>
-        </div>
+        </div></RevealItem>
 
-        <div className="flex min-w-0 flex-col">
+        <RevealItem independent duration={0.45} delay={0.1} className="flex min-w-0"><div className="flex min-w-0 flex-1 flex-col">
           <div className="relative z-10 -ml-0.5 -mb-2 flex h-13 w-58 max-w-full shrink-0 items-center px-6">
             <Image
               src="/port-attach-two.svg"
@@ -118,11 +118,11 @@ const OurPortfolio = () => {
               </div>
             </Link>
           </div>
-        </div>
+        </div></RevealItem>
       </div>
 
       <div className="mt-10 flex flex-col gap-6 border-t border-[#ccc] py-10 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
-        <div className="w-full min-w-0 space-y-3 lg:flex-1">
+        <RevealItem independent duration={0.45} className="w-full min-w-0 lg:flex-1"><div className="space-y-3">
           <div className="flex items-center space-x-2">
             <PortfolioIconTwo />
             <p className="text-[14px] text-[#3F4044]">New Ventures</p>
@@ -135,9 +135,9 @@ const OurPortfolio = () => {
             intelligence, digital infrastructure, financial technology and other
             frontier markets.
           </p>
-        </div>
+        </div></RevealItem>
 
-        <div className="lg:w-[50%]">
+        <RevealItem independent duration={0.45} delay={0.1} className="lg:w-[50%]"><div>
           <div className="flex w-full min-w-0 flex-wrap gap-2 lg:flex-1">
             {[
               "Artificial Intelligence",
@@ -159,7 +159,7 @@ const OurPortfolio = () => {
           <Link href="/contact?category=founders#enquiry" className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 mt-6 rounded-full hover:bg-[#333]">
             Build with us
           </Link>
-        </div>
+        </div></RevealItem>
       </div>
     </StaggerReveal>
   );

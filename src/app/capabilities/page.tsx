@@ -1,3 +1,6 @@
+import { pageMetadata } from "@/lib/page-metadata";
+import ImageWipe from "@/components/motion/ImageWipe";
+import RevealItem from "@/components/RevealItem";
 import Link from "next/link";
 import Footer from "@/components/defaults/Footer";
 import PreFooter from "@/components/defaults/PreFooter";
@@ -11,12 +14,10 @@ import {
   ShieldIcon,
   TechIcon,
 } from "@/components/icons";
-import type { Metadata } from "next";
 import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: "Capabilities",
-};
+
+export const metadata = pageMetadata("Capabilities", "Explore Ark Capital’s capabilities in research, venture building, technology, finance, operations and partnerships.", "/capabilities", "/capabilities/capabilities-hero.png");
 
 export default function CapabilitiesPage() {
   const capabilities = [
@@ -126,13 +127,14 @@ export default function CapabilitiesPage() {
     <>
       <TopNav theme="dark" />
       <main className="mx-auto w-[90%] pt-4 lg:w-[80%] lg:mt-20 mt-10 top lg:pb-20 pb-10">
+        <RevealItem independent>
         <div className="flex items-center space-x-2">
           <MissionSubIconOne />
           <p className="text-[14px] text-[#636363]">Capabilities</p>
         </div>
-        <h2 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
+        <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
           The capabilities required to turn ideas into institutions.
-        </h2>
+        </h1>
         <p className="text-[#636363] lg:mt-0 mt-2">
           Ark Capital provides more than financing. We bring together the
           strategic, technical, financial and operational capabilities required
@@ -142,23 +144,24 @@ export default function CapabilitiesPage() {
           Work with us
         </Link>
 
-        <Image
+        <ImageWipe className="mt-10 h-full w-full"><Image
           src="/capabilities/capabilities-hero.png"
           alt="hero-img"
           width={1120}
           height={480}
-          className="w-full h-full mt-10 rounded-xl"
-        />
-      </main>
+          className="w-full h-auto  rounded-xl"
+        /></ImageWipe>
+              </RevealItem>
+</main>
       <div className="bg-[#F8F7F5] lg:py-20 py-10">
-        <div className="w-[90%] lg:w-[80%] mx-auto lg:space-y-10 space-y-6">
+        <div className="w-[90%] lg:w-[80%] mx-auto space-y-6 lg:space-y-12 lg:pb-20">
           {capabilities.map((capability) => (
             <div
               key={capability.id}
-              className="bg-[#F0EFEC] p-1 rounded-xl flex lg:flex-row lg:space-x-3 flex-col-reverse"
+              className="bg-[#F0EFEC] p-1 rounded-xl flex lg:flex-row lg:space-x-3 flex-col-reverse lg:sticky lg:top-28 lg:min-h-[min(624px,calc(100svh-8rem))] lg:shadow-sm"
             >
               <div className="lg:w-[50%] bg-white p-6 rounded-xl flex flex-col justify-between self-stretch">
-                <div className="space-y-3 lg:mt-0 mt-4">
+                <RevealItem independent className="space-y-3 lg:mt-0 mt-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center  space-x-2">
                       {capability.icon}
@@ -174,9 +177,9 @@ export default function CapabilitiesPage() {
                   <p className="text-[#1A1A1A] lg:text-[28px] text-[20px] lg:pr-12">
                     {capability.mainText}
                   </p>
-                </div>
+                </RevealItem>
 
-                <div className="mt-auto flex flex-col pt-6">
+                <RevealItem independent className="mt-auto flex flex-col pt-6">
                   <span className="text-[#1A1A1A] text-[14px] font-semibold">
                     Our work includes
                   </span>
@@ -193,16 +196,16 @@ export default function CapabilitiesPage() {
                   <Link href="/contact#enquiry" className="inline-flex items-center justify-center bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
                     Work with us
                   </Link>
-                </div>
+                </RevealItem>
               </div>
               <div className="lg:w-[50%]">
-                <Image
+                <ImageWipe className="h-full w-full"><Image
                   src={capability.img}
                   alt={capability.iconText}
                   width={516}
                   height={624}
                   className="w-full lg:h-full h-64 object-cover"
-                />
+                /></ImageWipe>
               </div>
             </div>
           ))}

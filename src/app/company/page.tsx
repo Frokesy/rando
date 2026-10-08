@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/page-metadata";
+import ImageWipe from "@/components/motion/ImageWipe";
 import Link from "next/link";
 import Accordion from "@/components/Accordion";
 import PreFooter from "@/components/defaults/PreFooter";
@@ -16,6 +18,8 @@ import {
 import RevealItem from "@/components/RevealItem";
 import Image from "next/image";
 import Footer from "@/components/defaults/Footer";
+
+export const metadata = pageMetadata("Company", "Learn about Ark Capital, an investment and venture-building company connecting technology, disciplined capital and hands-on execution in Africa.", "/company", "/company-hero.png");
 
 const Company = () => {
   const items = [
@@ -92,13 +96,14 @@ const Company = () => {
     <>
       <TopNav theme="dark" />
       <main className="mx-auto w-[90%] pt-4 lg:w-[80%] lg:mt-20 mt-10 top lg:pb-20 pb-10">
+        <RevealItem independent>
         <div className="flex items-center space-x-2">
           <CompanyIcon />
           <p className="text-[14px] text-[#636363]">Company</p>
         </div>
-        <h2 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
+        <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
           Built in Africa. Designed for global relevance.
-        </h2>
+        </h1>
         <p className="text-[#636363] lg:mt-0 mt-2">
           Ark Capital is an investment and venture-building company established
           in 2024 to build high-potential businesses at the intersection of
@@ -111,14 +116,15 @@ const Company = () => {
           Work with us
         </Link>
 
-        <Image
+        <ImageWipe className="mt-10 h-full w-full"><Image
           src="/company-hero.png"
           alt="hero-img"
           width={1120}
           height={480}
-          className="w-full h-full mt-10 rounded-xl"
-        />
-      </main>
+          className="w-full h-auto  rounded-xl"
+        /></ImageWipe>
+              </RevealItem>
+</main>
 
       <div className="bg-[#F8F7F5] lg:py-20 py-10">
         <div className="lg:w-[80%] w-[90%] mx-auto">
@@ -135,16 +141,16 @@ const Company = () => {
             operational support.
           </h2>
           <div className="bg-white my-20 flex lg:flex-row flex-col justify-between items-center lg:space-y-0 space-y-10 lg:space-x-10 ">
-            <div className="lg:w-[50%] w-full">
-              <Image
+            <RevealItem independent className="lg:w-[50%] w-full">
+              <ImageWipe className="h-full w-full"><Image
                 src="/company-img-two.png"
                 width={534}
                 height={428}
                 className="h-auto w-full"
                 alt="Ark Capital Prefooter Graphic"
-              />
-            </div>
-            <div className="lg:w-[50%] w-full">
+              /></ImageWipe>
+            </RevealItem>
+            <RevealItem independent className="lg:w-[50%] w-full">
               <p className="lg:text-[18px] text-[#636363] mt-3">
                 Too many promising ventures receive funding without the
                 specialised assistance required to turn a strong product into a
@@ -161,13 +167,13 @@ const Company = () => {
                 and build the operational foundation required for long-term
                 growth.
               </p>
-            </div>
+            </RevealItem>
           </div>
         </div>
       </div>
 
       <div className="lg:w-[80%] w-[90%] mx-auto lg:py-20 py-10 flex justify-between lg:space-x-10 lg:space-y-0 space-y-10 lg:flex-row flex-col">
-        <div className="lg:w-[50%] p-4 bg-[#F8F7F5] space-y-20 rounded-lg">
+        <RevealItem independent className="lg:w-[50%] p-4 bg-[#F8F7F5] space-y-20 rounded-lg">
           <div className="flex justify-between">
             <span className="text-[#636363] text-[14px]">Our Mission</span>
             <MissionIcon />
@@ -176,8 +182,8 @@ const Company = () => {
             To build globally relevant companies and financial systems from
             Africa while creating long-term economic and financial value.
           </h2>
-        </div>
-        <div className="lg:w-[50%] p-4 bg-[#0E2859] space-y-20 rounded-lg text-white">
+        </RevealItem>
+        <RevealItem independent className="lg:w-[50%] p-4 bg-[#0E2859] space-y-20 rounded-lg text-white">
           <div className="flex justify-between">
             <span className="text-[14px]">Our Vision</span>
             <AofIcon />
@@ -186,12 +192,12 @@ const Company = () => {
             An Africa that does not merely consume the technologies shaping the
             future but actively designs, builds and owns them.
           </h2>
-        </div>
+        </RevealItem>
       </div>
 
       <div className="bg-[#F8F7F5] lg:py-20 py-10">
         <div className="lg:w-[80%] w-[90%] mx-auto">
-          <RevealItem className="">
+          <RevealItem independent className="">
             <div className="flex items-center space-x-2">
               <WhatWeDoIcon />
               <p className="text-[14px] text-[#636363]">Why Ark Capital</p>
@@ -209,8 +215,9 @@ const Company = () => {
 
           <div className="mt-10 grid grid-cols-1 gap-6 lg:mt-20 lg:grid-cols-6">
             {items.map((item, index) => (
-              <RevealItem
+              <RevealItem independent
                 key={index}
+                delay={index * 0.12}
                 className={index >= 3 ? "lg:col-span-3" : "lg:col-span-2"}
               >
                 <article className="h-full overflow-hidden rounded-xl bg-white p-4">
