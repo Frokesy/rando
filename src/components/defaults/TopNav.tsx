@@ -67,12 +67,14 @@ const TopNav = ({ theme = "light" }: TopNavProps) => {
   return (
     <div>
       <div className="flex justify-between items-center lg:w-[80%] w-[90%] mx-auto my-6">
+        <Link href="/" aria-label="Ark Capital home">
         <Image
           src={dark ? "/logo-black.svg" : "/logo-white.svg"}
           width={100}
           height={100}
           alt="Ark Capital Logo"
         />
+        </Link>
         <nav aria-label="Main navigation" className="hidden lg:block">
           <ul className="flex space-x-8">
             {links.map(({ label, href }) => (

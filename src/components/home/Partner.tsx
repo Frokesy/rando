@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { CPIcon } from "../icons";
 
@@ -37,9 +38,9 @@ const Partner = () => {
             experience, infrastructure and relationships developed across the
             wider portfolio.
           </p>
-          <button className="text-[14px] mt-4 hover:bg-[#636363] py-2 px-6 rounded-full text-white bg-gray-600 transition-colors duration-200">
+          <Link href="/contact?category=partners#enquiry" className="inline-flex items-center justify-center text-[14px] mt-4 hover:bg-[#636363] py-2 px-6 rounded-full text-white bg-gray-600 transition-colors duration-200">
             Partner with us
-          </button>
+          </Link>
         </div>
       </div>
     </div>

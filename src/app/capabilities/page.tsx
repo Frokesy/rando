@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Footer from "@/components/defaults/Footer";
 import PreFooter from "@/components/defaults/PreFooter";
 import TopNav from "@/components/defaults/TopNav";
@@ -137,9 +138,9 @@ export default function CapabilitiesPage() {
           strategic, technical, financial and operational capabilities required
           to build enduring companies.
         </p>
-        <button className="bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
+        <Link href="/contact#enquiry" className="inline-flex items-center justify-center bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
           Work with us
-        </button>
+        </Link>
 
         <Image
           src="/capabilities/capabilities-hero.png"
@@ -189,9 +190,9 @@ export default function CapabilitiesPage() {
                       </div>
                     ))}
                   </div>
-                  <button className="bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
+                  <Link href="/contact#enquiry" className="inline-flex items-center justify-center bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
                     Work with us
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className="lg:w-[50%]">

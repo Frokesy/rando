@@ -1,3 +1,4 @@
+import Link from "next/link";
 import StaggerReveal from "../StaggerReveal";
 import RevealItem from "../RevealItem";
 import { RightArrowIcon, WhatWeDoIcon } from "../icons";
@@ -57,9 +58,9 @@ const WhatWeDo = () => {
             founders, engineers and operators to turn strong ideas and technical
             capabilities into scalable businesses.
           </p>
-          <button className="bg-black text-white text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
+          <Link href="/contact#enquiry" className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
             Work with us
-          </button>
+          </Link>
         </RevealItem>
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-20 lg:grid-cols-3">
           {whatWeDo.map((item, index) => (
@@ -80,12 +81,12 @@ const WhatWeDo = () => {
                   build.
                 </p>
               </div>
-              <div className="flex justify-between items-center border-t-2 border-[#333] pt-4">
+              <Link href="/capabilities" className="group flex justify-between items-center border-t-2 border-[#333] pt-4">
                 <p className="text-[14px]">View capabilities</p>
                 <div className="bg-white rounded-full w-10 h-10 flex justify-center items-center hover:bg-[#333] hover:text-white transition-all duration-300">
                   <RightArrowIcon className="w-6 h-6 text-black inline-block hover:text-white" />
                 </div>
-              </div>
+              </Link>
             </div>
           </RevealItem>
         </div>

@@ -1,3 +1,6 @@
+import ConfiguredLink from "@/components/ConfiguredLink";
+import { externalLinks } from "@/config/external-links";
+import Link from "next/link";
 import Footer from "@/components/defaults/Footer";
 import PreFooter from "@/components/defaults/PreFooter";
 import TopNav from "@/components/defaults/TopNav";
@@ -31,7 +34,7 @@ const PortfolioPage = () => {
         />
       </main>
 
-      <div className="bg-[#F8F7F5] py-20">
+      <div id="ezrah" className="scroll-mt-6 bg-[#F8F7F5] py-20">
         <div className="lg:w-[80%] w-[90%] mx-auto">
           <div className="">
             <div className="flex items-center justify-between">
@@ -65,9 +68,9 @@ const PortfolioPage = () => {
               and help businesses, creators and professionals participate in the
               global digital economy.
             </p>
-            <button className="bg-[#F0EFEC] text-[#636363] py-2 px-4 rounded-lg mt-3 font-semibold">
+            <ConfiguredLink href={externalLinks.ezrah} className="inline-flex items-center justify-center bg-[#F0EFEC] text-[#636363] py-2 px-4 rounded-lg mt-3 font-semibold">
               Visit Ezrah
-            </button>
+            </ConfiguredLink>
           </div>
         </div>
         <div className="py-10 lg:w-[80%] w-[90%] mx-auto bg-white p-6 rounded-xl mt-10">
@@ -97,7 +100,8 @@ const PortfolioPage = () => {
       </div>
 
       <div
-        className="min-h-100 lg:py-20 py-10 bg-[#000501] lg:min-h-140"
+        id="ark-quant"
+        className="scroll-mt-6 min-h-100 lg:py-20 py-10 bg-[#000501] lg:min-h-140"
         style={{
           backgroundImage:
             "radial-gradient(ellipse at 0% 100%, #7FE3F229 0%, transparent 45%), radial-gradient(ellipse at 50% 55%, #0E28598C 0%, transparent 50%), radial-gradient(ellipse at 100% 45%, #2E6CA824 0%, transparent 40%)",
@@ -209,9 +213,9 @@ const PortfolioPage = () => {
               </div>
             ))}
           </div>
-          <button className="bg-black text-white text-[14px] py-2 px-4 mt-6 rounded-full hover:bg-[#333]">
+          <Link href="/contact?category=founders#enquiry" className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 mt-6 rounded-full hover:bg-[#333]">
             Introduce your company
-          </button>
+          </Link>
         </div>
       </div>
       <PreFooter />

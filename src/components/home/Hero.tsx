@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import type { SyntheticEvent } from "react";
 import TopNav from "../defaults/TopNav";
 import HeroMarquee from "./HeroMarquee";
@@ -51,12 +53,12 @@ const Hero = () => {
             globally relevant businesses from Africa.
           </p>
           <div className="flex items-center space-x-4 mb-20 lg:mb-0">
-            <button className="text-[15px] bg-white py-2 px-6 rounded-full text-black hover:bg-gray-200 transition-colors duration-200">
+            <Link href="/contact#enquiry" className="inline-flex items-center justify-center text-[15px] bg-white py-2 px-6 rounded-full text-black hover:bg-gray-200 transition-colors duration-200">
               Work with us
-            </button>
-            <button className="text-[15px] bg-inherit py-2 px-6 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors duration-200">
+            </Link>
+            <Link href="/portfolio" className="inline-flex items-center justify-center text-[15px] bg-inherit py-2 px-6 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors duration-200">
               Explore our portfolio
-            </button>
+            </Link>
           </div>
           <ScrollDown />
         </div>

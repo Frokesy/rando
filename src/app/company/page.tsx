@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Accordion from "@/components/Accordion";
 import PreFooter from "@/components/defaults/PreFooter";
 import TopNav from "@/components/defaults/TopNav";
@@ -14,6 +15,7 @@ import {
 } from "@/components/icons";
 import RevealItem from "@/components/RevealItem";
 import Image from "next/image";
+import Footer from "@/components/defaults/Footer";
 
 const Company = () => {
   const items = [
@@ -102,9 +104,12 @@ const Company = () => {
           in 2024 to build high-potential businesses at the intersection of
           technology, finance and infrastructure.
         </p>
-        <button className="bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
+        <Link
+          href="/contact#enquiry"
+          className="inline-flex items-center justify-center bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]"
+        >
           Work with us
-        </button>
+        </Link>
 
         <Image
           src="/company-hero.png"
@@ -194,9 +199,12 @@ const Company = () => {
             <h2 className="font-semibold lg:text-[56px] text-[34px] lg:mt-0 mt-3">
               What Makes Us Different
             </h2>
-            <button className="bg-black text-white text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
+            <Link
+              href="/contact?category=partners#enquiry"
+              className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 rounded-full hover:bg-[#333]"
+            >
               Partner with us
-            </button>
+            </Link>
           </RevealItem>
 
           <div className="mt-10 grid grid-cols-1 gap-6 lg:mt-20 lg:grid-cols-6">
@@ -238,6 +246,7 @@ const Company = () => {
         </div>
       </div>
       <PreFooter />
+      <Footer />
     </>
   );
 };

@@ -1,3 +1,6 @@
+import ConfiguredLink from "../ConfiguredLink";
+import { externalLinks } from "@/config/external-links";
+import BackToTop from "./BackToTop";
 import Link from "next/link";
 import {
   EmailIcon,
@@ -15,30 +18,30 @@ const Footer = () => {
           <div className="grid w-full grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:flex lg:w-[60%] lg:justify-between">
             <div className="flex flex-col space-y-2">
               <p className="text-white text-[14px] font-semibold">Company</p>
-              <p className="text-white/55 text-[14px]">About</p>
-              <p className="text-white/55 text-[14px]">Capabilities</p>
-              <p className="text-white/55 text-[14px]">Portfolio</p>
-              <p className="text-white/55 text-[14px]">Insights</p>
+              <Link href="/company" className="text-white/55 text-[14px] hover:text-white">About</Link>
+              <Link href="/capabilities" className="text-white/55 text-[14px] hover:text-white">Capabilities</Link>
+              <Link href="/portfolio" className="text-white/55 text-[14px] hover:text-white">Portfolio</Link>
+              <Link href="/insights" className="text-white/55 text-[14px] hover:text-white">Insights</Link>
             </div>
             <div className="flex flex-col space-y-2">
               <p className="text-white text-[14px] font-semibold">
                 Get in Touch
               </p>
-              <p className="text-white/55 text-[14px]">Contact</p>
-              <p className="text-white/55 text-[14px]">Partner with us</p>
-              <p className="text-white/55 text-[14px]">Submit a venture</p>
+              <Link href="/contact" className="text-white/55 text-[14px] hover:text-white">Contact</Link>
+              <Link href="/contact?category=partners#enquiry" className="text-white/55 text-[14px] hover:text-white">Partner with us</Link>
+              <Link href="/contact?category=founders#enquiry" className="text-white/55 text-[14px] hover:text-white">Submit a venture</Link>
             </div>
             <div className="flex flex-col space-y-2">
               <p className="text-white text-[14px] font-semibold">Legal</p>
-              <p className="text-white/55 text-[14px]">Privacy Policy</p>
-              <p className="text-white/55 text-[14px]">Terms of Use</p>
-              <p className="text-white/55 text-[14px]">Disclaimer</p>
+              <ConfiguredLink href={externalLinks.privacyPolicy} className="text-white/55 text-[14px]">Privacy Policy</ConfiguredLink>
+              <ConfiguredLink href={externalLinks.termsOfUse} className="text-white/55 text-[14px]">Terms of Use</ConfiguredLink>
+              <ConfiguredLink href={externalLinks.disclaimer} className="text-white/55 text-[14px]">Disclaimer</ConfiguredLink>
             </div>
           </div>
 
           <div className="flex w-full min-w-0 flex-col items-start space-y-4 lg:w-[30%] lg:items-end lg:justify-end">
             <Link
-              href="/#contact"
+              href="/contact"
               className="block rounded-full bg-white px-6 py-3 text-center text-[14px] text-black hover:bg-gray-200 lg:py-2"
             >
               Contact Us
@@ -48,15 +51,15 @@ const Footer = () => {
               Africa.
             </p>
             <div className="flex items-center space-x-2">
-              <div className="">
+              <ConfiguredLink href={externalLinks.linkedin} label="Ark Capital on LinkedIn" className="inline-flex">
                 <LinkedInIcon />
-              </div>
-              <div className="">
+              </ConfiguredLink>
+              <ConfiguredLink href={externalLinks.x} label="Ark Capital on X" className="inline-flex">
                 <XIcon />
-              </div>
-              <div className="">
+              </ConfiguredLink>
+              <ConfiguredLink href={externalLinks.email} label="Email Ark Capital" className="inline-flex">
                 <EmailIcon />
-              </div>
+              </ConfiguredLink>
             </div>
           </div>
         </div>
@@ -65,7 +68,7 @@ const Footer = () => {
           <p className="text-white/55 text-[14px]">
             © {new Date().getFullYear()} Ark Capital. All rights reserved.
           </p>
-          <p className="text-white/55 text-[14px]">Back to top ↗</p>
+          <BackToTop />
         </div>
 
         <div className="my-10 hidden lg:block [&>svg]:h-auto [&>svg]:w-full">

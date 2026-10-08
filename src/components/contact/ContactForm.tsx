@@ -1,13 +1,14 @@
 "use client";
 
 import { useId, useState, type ReactNode } from "react";
-import Link from "next/link";
+import ConfiguredLink from "../ConfiguredLink";
+import { externalLinks } from "@/config/external-links";
 
 type Category = { id: number; icon: ReactNode; title: string; subText: string };
 
-export default function ContactForm({ categories }: { categories: Category[] }) {
+export default function ContactForm({ categories, initialCategory }: { categories: Category[]; initialCategory?: number }) {
   const id = useId();
-  const [selected, setSelected] = useState<number | null>(null);
+  const [selected, setSelected] = useState<number | null>(initialCategory ?? null);
   const [status, setStatus] = useState("");
   const inputClass = "mt-2 w-full rounded-lg border border-neutral-300 bg-white p-3 outline-none focus:border-black focus:ring-1 focus:ring-black";
 
@@ -47,7 +48,7 @@ export default function ContactForm({ categories }: { categories: Category[] }) 
         <p id={`${id}-hint`} className="mt-2 text-sm text-[#636363]">Tell us briefly about your company partnership or enquiry.</p>
       </div>
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-[#636363]">By submitting this form you agree to our <Link href="/privacy-policy" className="underline underline-offset-2">privacy policy</Link>.</p>
+        <p className="text-sm text-[#636363]">By submitting this form you agree to our <ConfiguredLink href={externalLinks.privacyPolicy} className="underline underline-offset-2">privacy policy</ConfiguredLink>.</p>
         <button type="submit" className="shrink-0 rounded-full bg-black px-6 py-3 text-sm text-white transition-colors hover:bg-neutral-800">Send a message</button>
       </div>
       <p role="status" className="text-sm text-[#636363]">{status}</p>

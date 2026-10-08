@@ -1,4 +1,6 @@
-import ContactForm from "@/components/contact/ContactForm";
+import Link from "next/link";
+import ContactEnquiry from "@/components/contact/ContactEnquiry";
+import { Suspense } from "react";
 import Footer from "@/components/defaults/Footer";
 import TopNav from "@/components/defaults/TopNav";
 import {
@@ -93,9 +95,9 @@ const Contact = () => {
                 ))}
               </div>
               <div className="">
-                <button className="bg-white text-black mt-6 text-[14px] py-2 px-4 rounded-full">
+                <Link href="/contact?category=founders#enquiry" className="inline-flex items-center justify-center bg-white text-black mt-6 text-[14px] py-2 px-4 rounded-full">
                   Submit a venture
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -113,9 +115,9 @@ const Contact = () => {
               </div>
 
               <div className="mt-auto pt-8">
-                <button className="bg-white text-black mt-6 text-[14px]">
+                <Link href="/contact?category=investors#enquiry" className="inline-flex items-center justify-center bg-white text-black mt-6 text-[14px]">
                   Speak with our team
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -133,9 +135,9 @@ const Contact = () => {
               </div>
 
               <div className="mt-auto pt-8">
-                <button className="bg-white text-black mt-6 text-[14px]">
+                <Link href="/contact?category=partners#enquiry" className="inline-flex items-center justify-center bg-white text-black mt-6 text-[14px]">
                   Start a Conversation
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -153,16 +155,16 @@ const Contact = () => {
               </div>
 
               <div className="mt-auto pt-8">
-                <button className="bg-white text-black mt-6 text-[14px]">
+                <Link href="/contact?category=partners#enquiry" className="inline-flex items-center justify-center bg-white text-black mt-6 text-[14px]">
                   Partner with Ark
-                </button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="lg:w-[80%] w-[90%] mx-auto lg:py-20 py-10 flex flex-col gap-8 lg:flex-row lg:justify-between lg:gap-10">
+      <div id="enquiry" className="scroll-mt-6 lg:w-[80%] w-[90%] mx-auto lg:py-20 py-10 flex flex-col gap-8 lg:flex-row lg:justify-between lg:gap-10">
         <div className="w-full min-w-0 lg:w-[40%]">
           <div className="flex items-center space-x-2">
             <ContactIconOne />
@@ -174,7 +176,9 @@ const Contact = () => {
         </div>
 
         <div className="w-full min-w-0 lg:w-[60%]">
-          <ContactForm categories={categories} />
+          <Suspense fallback={<p>Loading enquiry form…</p>}>
+            <ContactEnquiry categories={categories} />
+          </Suspense>
         </div>
       </div>
 

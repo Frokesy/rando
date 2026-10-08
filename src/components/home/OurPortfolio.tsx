@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import StaggerReveal from "../StaggerReveal";
 import RevealItem from "../RevealItem";
@@ -24,9 +25,9 @@ const OurPortfolio = () => {
           We build and support focused companies and internal systems that solve
           important operational and financial problems.
         </p>
-        <button className="bg-black text-white text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
+        <Link href="/portfolio" className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
           Explore our portfolio
-        </button>
+        </Link>
       </RevealItem>
 
       <div className="mt-10 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2">
@@ -65,14 +66,14 @@ const OurPortfolio = () => {
               Ezrah is a technology company building infrastructure for trusted
               interactions between individuals, businesses and institutions.
             </p>
-            <button className="bg-[#E7E5E1] flex w-fit items-center space-x-3 mt-auto py-2 px-6 rounded-full hover:bg-[#f1f1f1] transition-all duration-300">
+            <Link href="/portfolio#ezrah" className="bg-[#E7E5E1] flex w-fit items-center space-x-3 mt-auto py-2 px-6 rounded-full hover:bg-[#f1f1f1] transition-all duration-300">
               <span className="text-[14px]  text-black transition-all duration-300 font-semibold">
                 Explore Ezrah
               </span>
               <div className="bg-black rounded-full w-8 h-8 flex justify-center items-center">
                 <RightArrowIcon className="w-4 h-4 text-white inline-block" />
               </div>
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -108,14 +109,14 @@ const OurPortfolio = () => {
               Ark Quant is Ark Capital&apos;s internal proprietary trading and
               capital-management initiative.
             </p>
-            <button className="flex w-fit items-center space-x-3 mt-auto py-2 px-6 rounded-full bg-gray-800 transition-colors duration-200 hover:bg-[#636363]">
+            <Link href="/portfolio#ark-quant" className="flex w-fit items-center space-x-3 mt-auto py-2 px-6 rounded-full bg-gray-800 transition-colors duration-200 hover:bg-[#636363]">
               <span className="text-[14px]  text-white transition-all duration-300 font-semibold">
                 Explore Ark Quant
               </span>
               <div className="bg-white rounded-full w-8 h-8 flex justify-center items-center">
                 <RightArrowIcon className="w-4 h-4 text-black inline-block" />
               </div>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -155,9 +156,9 @@ const OurPortfolio = () => {
               </div>
             ))}
           </div>
-          <button className="bg-black text-white text-[14px] py-2 px-4 mt-6 rounded-full hover:bg-[#333]">
+          <Link href="/contact?category=founders#enquiry" className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 mt-6 rounded-full hover:bg-[#333]">
             Build with us
-          </button>
+          </Link>
         </div>
       </div>
     </StaggerReveal>
