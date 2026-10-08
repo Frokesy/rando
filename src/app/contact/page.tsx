@@ -1,0 +1,186 @@
+import ContactForm from "@/components/contact/ContactForm";
+import Footer from "@/components/defaults/Footer";
+import TopNav from "@/components/defaults/TopNav";
+import {
+  Checkmark,
+  CompanyIcon,
+  ContactIconOne,
+  ContactIconTwo,
+  GrowthIcon,
+  PortfolioIconTwo,
+  TechnicalIcon,
+} from "@/components/icons";
+import React from "react";
+
+const Contact = () => {
+  const categories = [
+    {
+      id: 1,
+      icon: <PortfolioIconTwo />,
+      title: "Founders",
+      subText: "Introduce your company or technology",
+    },
+    {
+      id: 2,
+      icon: <ContactIconTwo />,
+      title: "Partners",
+      subText: "Discuss a commercial, technical or strategic partnership",
+    },
+    {
+      id: 3,
+      icon: <GrowthIcon />,
+      title: "Investors",
+      subText: "Learn more about Ark Capital and its portfolio",
+    },
+    {
+      id: 4,
+      icon: <ContactIconOne />,
+      title: "General Enquiries",
+      subText: "Contact Ark Capital for other matters",
+    },
+  ];
+  return (
+    <>
+      <TopNav theme="dark" />
+      <main className="mx-auto w-[90%] pt-4 lg:w-[80%] lg:mt-20 mt-10 top lg:pb-20 pb-10">
+        <div className="flex items-center space-x-2">
+          <ContactIconOne />
+          <p className="text-[14px] text-[#636363]">Contact</p>
+        </div>
+        <h2 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
+          Start a conversation
+        </h2>
+        <p className="text-[#636363] lg:mt-0 mt-2">
+          Whether you are building a company, exploring a partnership or
+          interested in working with us, we would like to hear from you.
+        </p>
+      </main>
+
+      <div className="bg-[#F8F7F5] lg:py-20 py-10">
+        <div className="lg:w-[80%] w-[90%] mx-auto">
+          <div className="">
+            <div className="flex items-center space-x-2">
+              <ContactIconTwo />
+              <p className="text-[14px] text-[#636363]">Partners</p>
+            </div>
+            <h2 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
+              Let&apos;s build what matters
+            </h2>
+            <p className="text-[#636363] lg:mt-0 mt-2">
+              Ark Capital works with people and institutions that bring
+              specialised knowledge, technology, capital, market access or
+              operating experience.
+            </p>
+          </div>
+
+          <div className="mt-6 flex flex-col items-stretch gap-4 lg:flex-row">
+            <div className="flex w-full min-w-0 flex-col bg-[#1A1A1A] lg:p-6 p-4 rounded-lg text-white lg:w-[55%]">
+              <PortfolioIconTwo color="white" />
+              <h2 className="mt-4 text-[20px]">Founders and technical teams</h2>
+              <p className="text-[15px] mt-1">We work with teams that have:</p>
+              <div className="space-y-2 mt-4">
+                {[
+                  "A strong understanding of the problem they are solving",
+                  "Genuine technical capability",
+                  "Evidence of execution",
+                  "Openness to close operational collaboration",
+                  "The ambition to build a globally relevant company",
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <Checkmark color="#7FE3F2" />
+                    <span className="text-[15px]">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="">
+                <button className="bg-white text-black mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
+                  Submit a venture
+                </button>
+              </div>
+            </div>
+
+            <div className="w-full min-w-0 bg-white flex flex-col justify-between lg:p-6 p-4 rounded-lg lg:w-[45%] lg:min-h-80">
+              <div className="">
+                <GrowthIcon />
+                <h2 className="text-[20px] mt-2">
+                  Investors and Financial Partners
+                </h2>
+                <p className="text-[15px] text-[#636363] mt-2">
+                  We develop relationships with investors and institutions
+                  interested in technology, financial infrastructure,
+                  quantitative markets and high-potential African businesses.
+                </p>
+              </div>
+
+              <div className="mt-auto pt-8">
+                <button className="bg-white text-black mt-6 text-[14px]">
+                  Speak with our team
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 flex flex-col items-stretch gap-4 lg:flex-row">
+            <div className="w-full min-w-0 bg-white flex flex-col justify-between lg:p-6 p-4 rounded-lg lg:w-[45%] lg:min-h-80">
+              <div className="">
+                <CompanyIcon />
+                <h2 className="text-[20px] mt-2">Companies and institutions</h2>
+                <p className="text-[15px] text-[#636363] mt-2">
+                  We work with organisations seeking technology, financial
+                  infrastructure, strategic partnerships or access to
+                  specialised portfolio capabilities.
+                </p>
+              </div>
+
+              <div className="mt-auto pt-8">
+                <button className="bg-white text-black mt-6 text-[14px]">
+                  Start a Conversation
+                </button>
+              </div>
+            </div>
+
+            <div className="flex w-full min-w-0 flex-col justify-between bg-white lg:p-6 p-4 rounded-lg text-black lg:w-[55%] lg:min-h-80">
+              <div className="">
+                <TechnicalIcon />
+                <h2 className="text-[20px] mt-2">
+                  Technical and Strategic Partners
+                </h2>
+                <p className="text-[15px] text-[#636363] mt-2">
+                  We collaborate with researchers, engineers, operators and
+                  advisers whose capabilities can strengthen our companies and
+                  internal systems.
+                </p>
+              </div>
+
+              <div className="mt-auto pt-8">
+                <button className="bg-white text-black mt-6 text-[14px]">
+                  Partner with Ark
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="lg:w-[80%] w-[90%] mx-auto lg:py-20 py-10 flex flex-col gap-8 lg:flex-row lg:justify-between lg:gap-10">
+        <div className="w-full min-w-0 lg:w-[40%]">
+          <div className="flex items-center space-x-2">
+            <ContactIconOne />
+            <p className="text-[14px] text-[#636363]">Enquiry</p>
+          </div>
+          <h2 className="font-semibold lg:text-[56px] text-[34px] lg:mt-0 mt-3">
+            Contact Categories
+          </h2>
+        </div>
+
+        <div className="w-full min-w-0 lg:w-[60%]">
+          <ContactForm categories={categories} />
+        </div>
+      </div>
+
+      <Footer />
+    </>
+  );
+};
+
+export default Contact;

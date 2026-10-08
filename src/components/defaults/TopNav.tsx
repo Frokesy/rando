@@ -90,9 +90,9 @@ const TopNav = ({ theme = "light" }: TopNavProps) => {
           </ul>
         </nav>
         <Link
-          href="/#contact"
+          href="/contact"
           className={`px-6 py-2 lg:block hidden rounded-full text-[14px] transition-colors ${dark ? "bg-black text-white hover:bg-neutral-800" : "bg-white text-black hover:bg-gray-200"}`}
-          onClick={() => selectLink("/#contact")}
+          onClick={() => selectLink("/contact")}
         >
           Contact Us
         </Link>
@@ -137,12 +137,12 @@ const TopNav = ({ theme = "light" }: TopNavProps) => {
             ))}
             <li>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="mt-4 block w-full rounded-full bg-black px-6 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-neutral-800"
                 aria-current={
-                  activeHref === "/#contact" ? "location" : undefined
+                  activeHref === "/contact" ? "location" : undefined
                 }
-                onClick={() => selectLink("/#contact")}
+                onClick={() => selectLink("/contact")}
               >
                 Contact Us
               </Link>
