@@ -1,10 +1,10 @@
 "use client";
 
-import { AnimatePresence,motion,useReducedMotion } from "framer-motion";
-import { useEffect,useRef,type ReactNode } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, type ReactNode } from "react";
 import { CloseIcon } from "../icons";
 
-type DrawerProps={
+type DrawerProps = {
   id: string;
   isOpen: boolean;
   onClose: () => void;
@@ -21,19 +21,19 @@ export default function Drawer({
   header,
   children,
 }: DrawerProps) {
-  const dialogRef=useRef<HTMLDialogElement>(null);
-  const reducedMotion=useReducedMotion();
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const reducedMotion = useReducedMotion();
 
   useEffect(() => {
-    if(!isOpen) return;
-    const dialog=dialogRef.current;
-    if(dialog&&!dialog.open) dialog.showModal();
-    const previousOverflow=document.body.style.overflow;
-    document.body.style.overflow="hidden";
+    if (!isOpen) return;
+    const dialog = dialogRef.current;
+    if (dialog && !dialog.open) dialog.showModal();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow=previousOverflow;
+      document.body.style.overflow = previousOverflow;
     };
-  },[isOpen]);
+  }, [isOpen]);
 
   return (
     <dialog
@@ -49,16 +49,16 @@ export default function Drawer({
     >
       <AnimatePresence
         onExitComplete={() => {
-          if(!isOpen) dialogRef.current?.close();
+          if (!isOpen) dialogRef.current?.close();
         }}
       >
-        {isOpen&&(
+        {isOpen && (
           <motion.div
             key="drawer"
-            initial={{ opacity: 0,y: reducedMotion? 0:24 }}
-            animate={{ opacity: 1,y: 0 }}
-            exit={{ opacity: 0,y: reducedMotion? 0:24 }}
-            transition={{ duration: reducedMotion? 0:0.25,ease: "easeOut" }}
+            initial={{ opacity: 0, y: reducedMotion ? 0 : 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: reducedMotion ? 0 : 24 }}
+            transition={{ duration: reducedMotion ? 0 : 0.25, ease: "easeOut" }}
             className="h-dvh w-full overflow-y-auto bg-white px-6 pt-[max(1.5rem,env(safe-area-inset-top))] pb-[max(2rem,env(safe-area-inset-bottom))]"
           >
             <div className="mb-12 flex items-center justify-between">

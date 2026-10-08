@@ -7,39 +7,39 @@ import Link from "next/link";
 import Footer from "@/components/defaults/Footer";
 import PreFooter from "@/components/defaults/PreFooter";
 import TopNav from "@/components/defaults/TopNav";
-import { Briefcase,Checkmark,PortfolioIconTwo } from "@/components/icons";
+import { Briefcase, Checkmark, PortfolioIconTwo } from "@/components/icons";
 import Image from "next/image";
 
-export const metadata=pageMetadata("Portfolio","Discover Ezrah, Ark Quant and the companies and systems Ark Capital builds and supports.","/portfolio","/portfolio-hero.png");
+export const metadata = pageMetadata("Portfolio", "Discover Ezrah, Ark Quant and the companies and systems Ark Capital builds and supports.", "/portfolio", "/portfolio-hero.png");
 
-const PortfolioPage=() => {
+const PortfolioPage = () => {
   return (
     <>
       <TopNav theme="dark" />
       <main className="mx-auto w-[90%] pt-4 lg:w-[80%] lg:mt-20 mt-10 top lg:pb-20 pb-10">
         <RevealItem independent>
-          <div className="flex items-center space-x-2">
-            <Briefcase />
-            <p className="text-[14px] text-[#636363]">Portfolio</p>
-          </div>
-          <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
-            Focused companies. Shared capabilities. Long-term ambition.
-          </h1>
-          <p className="text-[#636363] lg:mt-0 mt-2">
-            Our portfolio reflects our belief that specialised teams, disciplined
-            execution and connected operating capabilities can produce enduring
-            businesses.
-          </p>
+        <div className="flex items-center space-x-2">
+          <Briefcase />
+          <p className="text-[14px] text-[#636363]">Portfolio</p>
+        </div>
+        <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
+          Focused companies. Shared capabilities. Long-term ambition.
+        </h1>
+        <p className="text-[#636363] lg:mt-0 mt-2">
+          Our portfolio reflects our belief that specialised teams, disciplined
+          execution and connected operating capabilities can produce enduring
+          businesses.
+        </p>
 
-          <ImageWipe className="mt-10 h-full w-full"><Image
-            src="/portfolio-hero.png"
-            alt="hero-img"
-            width={1120}
-            height={480}
-            className="w-full h-auto  rounded-xl"
-          /></ImageWipe>
-        </RevealItem>
-      </main>
+        <ImageWipe className="mt-10 h-full w-full"><Image
+          src="/portfolio-hero.png"
+          alt="hero-img"
+          width={1120}
+          height={480}
+          className="w-full h-auto  rounded-xl"
+        /></ImageWipe>
+              </RevealItem>
+</main>
 
       <div id="ezrah" className="scroll-mt-6 bg-[#F8F7F5] py-20">
         <RevealItem independent className="lg:w-[80%] w-[90%] mx-auto">
@@ -159,13 +159,13 @@ const PortfolioPage=() => {
                 "Position monitoring",
                 "Performance measurement",
                 "Trade reconciliation",
-              ].map((item,index) => (
+              ].map((item, index) => (
                 <div
                   key={index}
                   className="flex items-center space-x-6 bg-[#1A1A1A]/80 p-2 rounded-lg"
                 >
                   <span className="text-[13px] font-semibold text-[#7FE3F2]">
-                    0{index+1}
+                    0{index + 1}
                   </span>
                   <span className="text-[14px] text-white/80">{item}</span>
                 </div>

@@ -3,7 +3,7 @@ import RevealItem from "../RevealItem";
 import React from "react";
 import { BeliefIcon } from "../icons";
 
-const Belief=() => {
+const Belief = () => {
   return (
     <StaggerReveal duration={0.45} stagger={0.1} className="bg-[#F8F7F5] lg:pt-30 pt-20 pb-6 flex flex-col items-center justify-center text-center">
       <RevealItem><div className="flex items-center space-x-2">

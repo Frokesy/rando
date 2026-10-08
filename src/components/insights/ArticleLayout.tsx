@@ -5,11 +5,11 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import TopNav from "../defaults/TopNav";
 import Footer from "../defaults/Footer";
-import { MiniLogo,RightArrowIcon } from "../icons";
+import { MiniLogo, RightArrowIcon } from "../icons";
 import CategoryIcon from "./CategoryIcon";
 import MoreInsights from "./MoreInsights";
 
-type ArticleLayoutProps={
+type ArticleLayoutProps = {
   title: string;
   category: string;
   dateTime: string;
@@ -42,20 +42,13 @@ export default function ArticleLayout({
         <article className="mt-8">
           <RevealItem independent className="lg:w-[80%] mx-auto">
             <div className="flex items-center gap-2 text-[#0E2859]">
-              <span
-                aria-hidden="true"
-                className="shrink-0 [&_path]:stroke-[#0E2859]"
-              >
-                <CategoryIcon category={category} />
-              </span>
+              <span aria-hidden="true" className="shrink-0 [&_path]:stroke-[#0E2859]"><CategoryIcon category={category} /></span>
               <p className="text-sm font-medium">{category}</p>
             </div>
             <h1 className="mt-4 text-[34px] font-semibold leading-tight sm:text-5xl lg:text-[64px]">
               {title}
             </h1>
-            <p className="mt-6 text-base leading-relaxed text-[#636363] sm:text-lg">
-              {excerpt}
-            </p>
+            <p className="mt-6 text-base leading-relaxed text-[#636363] sm:text-lg">{excerpt}</p>
             <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[#636363]">
               <div className="flex items-center text-black space-x-2">
                 <div className="bg-[#000501] w-7 h-7 flex items-center justify-center rounded-full">
@@ -66,7 +59,7 @@ export default function ArticleLayout({
               <span>{dateTime}</span>
             </div>
           </RevealItem>
-          <ImageWipe className="relative mt-10 aspect-video w-full overflow-hidden rounded-xl lg:aspect-auto lg:h-120">
+          <ImageWipe className="relative mt-10 aspect-video w-full overflow-hidden rounded-xl lg:aspect-auto lg:h-[480px]">
             <Image
               src={image}
               alt={title}
@@ -76,10 +69,7 @@ export default function ArticleLayout({
               className="object-cover"
             />
           </ImageWipe>
-          <RevealItem
-            independent
-            className="mx-auto mt-10 max-w-3xl space-y-6 text-base leading-8 text-[#3F4044] sm:text-lg [&_h2]:pt-4 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-black [&_ul]:list-disc [&_ul]:pl-6"
-          >
+          <RevealItem independent className="mx-auto mt-10 max-w-3xl space-y-6 text-base leading-8 text-[#3F4044] sm:text-lg [&_h2]:pt-4 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-black [&_ul]:list-disc [&_ul]:pl-6">
             {children}
           </RevealItem>
         </article>

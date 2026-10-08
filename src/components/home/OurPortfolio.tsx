@@ -10,7 +10,7 @@ import {
 } from "../icons";
 import Image from "next/image";
 
-const OurPortfolio=() => {
+const OurPortfolio = () => {
   return (
     <StaggerReveal duration={0.45} stagger={0.1} className="lg:w-[80%] w-[90%] mx-auto lg:py-30 py-20">
       <StaggerReveal duration={0.45} stagger={0.1} className="">

@@ -3,8 +3,8 @@ import RevealItem from "../RevealItem";
 import { AofIcon } from "../icons";
 import FocusCard from "./FocusCard";
 
-const AreasOfFocus=() => {
-  const areasOfFocus=[
+const AreasOfFocus = () => {
+  const areasOfFocus = [
     {
       id: 1,
       vid: "/aof/vid-one.mp4",
@@ -54,15 +54,15 @@ const AreasOfFocus=() => {
       </StaggerReveal>
 
       <div className="mt-10 grid grid-cols-1 gap-6 lg:mt-20 lg:grid-cols-6">
-        {areasOfFocus.map((area,index) => (
+        {areasOfFocus.map((area, index) => (
           <FocusCard
             key={area.id}
-            delay={(index%3)*0.1}
+            delay={(index % 3) * 0.1}
             video={area.vid}
             title={area.title}
             description={area.description}
-            wide={index>=3}
-            containVideoOnMobile={area.id===5}
+            wide={index >= 3}
+            containVideoOnMobile={area.id === 5}
           />
         ))}
       </div>

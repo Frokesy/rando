@@ -10,7 +10,7 @@ import {
   XIcon,
 } from "../icons";
 
-const Footer=() => {
+const Footer = () => {
   return (
     <div className="bg-[#000501]">
       <div className="lg:w-[80%] w-[90%] mx-auto lg:py-20 py-10">

@@ -1,19 +1,19 @@
 "use client";
 
-import { motion,useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { useId } from "react";
-import { CloseIconTwo,PlusIcon } from "./icons";
+import { CloseIconTwo, PlusIcon } from "./icons";
 
-type AccordionItemProps={
+type AccordionItemProps = {
   title: string;
   content: string;
   isOpen: boolean;
   onToggle: () => void;
 };
 
-export default function AccordionItem({ title,content,isOpen,onToggle }: AccordionItemProps) {
-  const id=useId();
-  const reducedMotion=useReducedMotion();
+export default function AccordionItem({ title, content, isOpen, onToggle }: AccordionItemProps) {
+  const id = useId();
+  const reducedMotion = useReducedMotion();
 
   return (
     <div className="rounded-xl bg-[#F8F7F5] text-[#1A1A1A]">
@@ -29,10 +29,10 @@ export default function AccordionItem({ title,content,isOpen,onToggle }: Accordi
         <motion.span
           className="inline-flex shrink-0"
           aria-hidden="true"
-          animate={{ rotate: isOpen? 90:0 }}
-          transition={{ duration: reducedMotion? 0:0.25 }}
+          animate={{ rotate: isOpen ? 90 : 0 }}
+          transition={{ duration: reducedMotion ? 0 : 0.25 }}
         >
-          {isOpen? <CloseIconTwo />:<PlusIcon />}
+          {isOpen ? <CloseIconTwo /> : <PlusIcon />}
         </motion.span>
       </button>
       <motion.div
@@ -41,8 +41,8 @@ export default function AccordionItem({ title,content,isOpen,onToggle }: Accordi
         aria-labelledby={`${id}-trigger`}
         aria-hidden={!isOpen}
         initial={false}
-        animate={{ height: isOpen? "auto":0,opacity: isOpen? 1:0 }}
-        transition={{ duration: reducedMotion? 0:0.3,ease: "easeInOut" }}
+        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+        transition={{ duration: reducedMotion ? 0 : 0.3, ease: "easeInOut" }}
         className="overflow-hidden"
       >
         <p className="px-4 pb-5 text-[15px] leading-relaxed text-[#636363] sm:px-5">

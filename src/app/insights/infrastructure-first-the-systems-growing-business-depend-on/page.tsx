@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ArticleLayout from "@/components/insights/ArticleLayout";
 
-export const metadata: Metadata={
+export const metadata: Metadata = {
   title: "Infrastructure first: the systems growing business depend on",
   description:
     "Read Ark Capital’s insight: Infrastructure first: the systems growing business depend on.",

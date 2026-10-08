@@ -18,10 +18,10 @@ import React from "react";
 import PreFooter from "@/components/defaults/PreFooter";
 import Footer from "@/components/defaults/Footer";
 
-export const metadata=pageMetadata("Insights","Read Ark Capital’s research on artificial intelligence, financial technology, venture building and the systems shaping Africa’s next economy.","/insights","/capabilities/img-four.png");
+export const metadata = pageMetadata("Insights", "Read Ark Capital’s research on artificial intelligence, financial technology, venture building and the systems shaping Africa’s next economy.", "/insights", "/capabilities/img-four.png");
 
-const Insights=() => {
-  const articles=[
+const Insights = () => {
+  const articles = [
     {
       id: 1,
       categoryIcon: <Brain />,
@@ -105,63 +105,63 @@ const Insights=() => {
       <TopNav theme="dark" />
       <main className="mx-auto w-[90%] pt-4 lg:w-[80%] lg:mt-20 mt-10 top lg:pb-20 pb-10">
         <RevealItem independent>
-          <div className="flex items-center space-x-2">
-            <InsightsIcon />
-            <p className="text-[14px] text-[#636363]">Insights</p>
-          </div>
-          <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
-            Research for building and investing at the frontier.
-          </h1>
-          <p className="text-[#636363] lg:mt-0 mt-2">
-            Our insights examine the technologies, markets and systems shaping the
-            future of business and finance in Africa and beyond.
-          </p>
+        <div className="flex items-center space-x-2">
+          <InsightsIcon />
+          <p className="text-[14px] text-[#636363]">Insights</p>
+        </div>
+        <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
+          Research for building and investing at the frontier.
+        </h1>
+        <p className="text-[#636363] lg:mt-0 mt-2">
+          Our insights examine the technologies, markets and systems shaping the
+          future of business and finance in Africa and beyond.
+        </p>
 
-          <div className="group relative isolate mt-10 flex min-h-100 w-full flex-col justify-between gap-10 overflow-hidden rounded-xl lg:p-5 p-3 transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-xl motion-reduce:transform-none motion-reduce:transition-none sm:p-6 lg:aspect-7/3">
-            <div
-              aria-hidden="true"
-              data-page-media
-              className="absolute inset-0 -z-10 bg-cover bg-center transition-[transform,filter] duration-700 ease-out group-hover:scale-[1.04] group-hover:blur-[2px] motion-reduce:transform-none motion-reduce:transition-none"
-              style={{
-                backgroundImage:
-                  "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75)), url('/capabilities/img-four.png')",
-              }}
-            />
-            <div className="flex">
-              <div className="backdrop-blur-3xl flex items-center p-3 bg-white/20 font-semibold rounded-xl space-x-2 text-white transition-colors duration-300 group-hover:bg-white/30 motion-reduce:transition-none">
-                <WalletIcon />
-                <span className="text-[13px]">Financial Technology</span>
-              </div>
-            </div>
-
-            <div className="mt-auto w-full min-w-0 space-y-4 text-white lg:w-[60%]">
-              <span className="text-[13px]">22 September 2026 · 2 min read </span>
-              <h2 className="text-[26px] leading-tight font-semibold sm:text-[32px] lg:text-[40px]">
-                <Link
-                  href="/insights/building-payment-infrastructure-that-institutions-can-trust"
-                  className="after:absolute after:inset-0 after:rounded-xl focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-white"
-                >
-                  Building payment infrastructure that institutions can trust
-                </Link>
-              </h2>
-              <p className="text-[14px] leading-relaxed sm:text-base">
-                Reliable payments, collections and reporting are not features to
-                add later. For businesses and financial institutions, they are the
-                foundation everything else depends on.
-              </p>
-
-              <div className="flex items-center text-white space-x-2">
-                <div className="bg-[#0E2859] w-7 h-7 flex items-center justify-center rounded-full">
-                  <MiniLogo />
-                </div>
-                <span className="text-[13px]">Ark Capital</span>
-              </div>
+        <div className="group relative isolate mt-10 flex min-h-100 w-full flex-col justify-between gap-10 overflow-hidden rounded-xl lg:p-5 p-3 transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-xl motion-reduce:transform-none motion-reduce:transition-none sm:p-6 lg:aspect-7/3">
+          <div
+            aria-hidden="true"
+            data-page-media
+            className="absolute inset-0 -z-10 bg-cover bg-center transition-[transform,filter] duration-700 ease-out group-hover:scale-[1.04] group-hover:blur-[2px] motion-reduce:transform-none motion-reduce:transition-none"
+            style={{
+              backgroundImage:
+                "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75)), url('/capabilities/img-four.png')",
+            }}
+          />
+          <div className="flex">
+            <div className="backdrop-blur-3xl flex items-center p-3 bg-white/20 font-semibold rounded-xl space-x-2 text-white transition-colors duration-300 group-hover:bg-white/30 motion-reduce:transition-none">
+              <WalletIcon />
+              <span className="text-[13px]">Financial Technology</span>
             </div>
           </div>
 
-          <ArticleBrowser articles={articles} />
-        </RevealItem>
-      </main>
+          <div className="mt-auto w-full min-w-0 space-y-4 text-white lg:w-[60%]">
+            <span className="text-[13px]">22 September 2026 · 2 min read </span>
+            <h2 className="text-[26px] leading-tight font-semibold sm:text-[32px] lg:text-[40px]">
+              <Link
+                href="/insights/building-payment-infrastructure-that-institutions-can-trust"
+                className="after:absolute after:inset-0 after:rounded-xl focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-white"
+              >
+                Building payment infrastructure that institutions can trust
+              </Link>
+            </h2>
+            <p className="text-[14px] leading-relaxed sm:text-base">
+              Reliable payments, collections and reporting are not features to
+              add later. For businesses and financial institutions, they are the
+              foundation everything else depends on.
+            </p>
+
+            <div className="flex items-center text-white space-x-2">
+              <div className="bg-[#0E2859] w-7 h-7 flex items-center justify-center rounded-full">
+                <MiniLogo />
+              </div>
+              <span className="text-[13px]">Ark Capital</span>
+            </div>
+          </div>
+        </div>
+
+        <ArticleBrowser articles={articles} />
+              </RevealItem>
+</main>
 
       <PreFooter />
       <Footer />

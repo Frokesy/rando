@@ -19,10 +19,10 @@ import RevealItem from "@/components/RevealItem";
 import Image from "next/image";
 import Footer from "@/components/defaults/Footer";
 
-export const metadata=pageMetadata("Company","Learn about Ark Capital, an investment and venture-building company connecting technology, disciplined capital and hands-on execution in Africa.","/company","/company-hero.png");
+export const metadata = pageMetadata("Company", "Learn about Ark Capital, an investment and venture-building company connecting technology, disciplined capital and hands-on execution in Africa.", "/company", "/company-hero.png");
 
-const Company=() => {
-  const items=[
+const Company = () => {
+  const items = [
     {
       id: 1,
       icon: <MissionSubIconOne />,
@@ -60,7 +60,7 @@ const Company=() => {
     },
   ];
 
-  const principles=[
+  const principles = [
     {
       id: 1,
       title: "Technical depth",
@@ -97,34 +97,34 @@ const Company=() => {
       <TopNav theme="dark" />
       <main className="mx-auto w-[90%] pt-4 lg:w-[80%] lg:mt-20 mt-10 top lg:pb-20 pb-10">
         <RevealItem independent>
-          <div className="flex items-center space-x-2">
-            <CompanyIcon />
-            <p className="text-[14px] text-[#636363]">Company</p>
-          </div>
-          <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
-            Built in Africa. Designed for global relevance.
-          </h1>
-          <p className="text-[#636363] lg:mt-0 mt-2">
-            Ark Capital is an investment and venture-building company established
-            in 2024 to build high-potential businesses at the intersection of
-            technology, finance and infrastructure.
-          </p>
-          <Link
-            href="/contact#enquiry"
-            className="inline-flex items-center justify-center bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]"
-          >
-            Work with us
-          </Link>
+        <div className="flex items-center space-x-2">
+          <CompanyIcon />
+          <p className="text-[14px] text-[#636363]">Company</p>
+        </div>
+        <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
+          Built in Africa. Designed for global relevance.
+        </h1>
+        <p className="text-[#636363] lg:mt-0 mt-2">
+          Ark Capital is an investment and venture-building company established
+          in 2024 to build high-potential businesses at the intersection of
+          technology, finance and infrastructure.
+        </p>
+        <Link
+          href="/contact#enquiry"
+          className="inline-flex items-center justify-center bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]"
+        >
+          Work with us
+        </Link>
 
-          <ImageWipe className="mt-10 h-full w-full"><Image
-            src="/company-hero.png"
-            alt="hero-img"
-            width={1120}
-            height={480}
-            className="w-full h-auto  rounded-xl"
-          /></ImageWipe>
-        </RevealItem>
-      </main>
+        <ImageWipe className="mt-10 h-full w-full"><Image
+          src="/company-hero.png"
+          alt="hero-img"
+          width={1120}
+          height={480}
+          className="w-full h-auto  rounded-xl"
+        /></ImageWipe>
+              </RevealItem>
+</main>
 
       <div className="bg-[#F8F7F5] lg:py-20 py-10">
         <div className="lg:w-[80%] w-[90%] mx-auto">
@@ -214,11 +214,11 @@ const Company=() => {
           </RevealItem>
 
           <div className="mt-10 grid grid-cols-1 gap-6 lg:mt-20 lg:grid-cols-6">
-            {items.map((item,index) => (
+            {items.map((item, index) => (
               <RevealItem independent
                 key={index}
-                delay={index*0.12}
-                className={index>=3? "lg:col-span-3":"lg:col-span-2"}
+                delay={index * 0.12}
+                className={index >= 3 ? "lg:col-span-3" : "lg:col-span-2"}
               >
                 <article className="h-full overflow-hidden rounded-xl bg-white p-4">
                   {item.icon}
