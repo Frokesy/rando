@@ -16,8 +16,12 @@ import {
 } from "@/components/icons";
 import Image from "next/image";
 
-
-export const metadata = pageMetadata("Capabilities", "Explore Ark Capital’s capabilities in research, venture building, technology, finance, operations and partnerships.", "/capabilities", "/capabilities/capabilities-hero.png");
+export const metadata = pageMetadata(
+  "Capabilities",
+  "Explore Ark Capital’s capabilities in research, venture building, technology, finance, operations and partnerships.",
+  "/capabilities",
+  "/capabilities/capabilities-hero.png",
+);
 
 export default function CapabilitiesPage() {
   const capabilities = [
@@ -128,31 +132,36 @@ export default function CapabilitiesPage() {
       <TopNav theme="dark" />
       <main className="mx-auto w-[90%] pt-4 lg:w-[80%] lg:mt-20 mt-10 top lg:pb-20 pb-10">
         <RevealItem independent>
-        <div className="flex items-center space-x-2">
-          <MissionSubIconOne />
-          <p className="text-[14px] text-[#636363]">Capabilities</p>
-        </div>
-        <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
-          The capabilities required to turn ideas into institutions.
-        </h1>
-        <p className="text-[#636363] lg:mt-0 mt-2">
-          Ark Capital provides more than financing. We bring together the
-          strategic, technical, financial and operational capabilities required
-          to build enduring companies.
-        </p>
-        <Link href="/contact#enquiry" className="inline-flex items-center justify-center bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
-          Work with us
-        </Link>
+          <div className="flex items-center space-x-2">
+            <MissionSubIconOne />
+            <p className="text-[14px] text-[#636363]">Capabilities</p>
+          </div>
+          <h1 className="mt-4 font-semibold lg:text-[64px] text-[34px]">
+            The capabilities required to turn ideas into institutions.
+          </h1>
+          <p className="text-[#636363] lg:mt-0 mt-2">
+            Ark Capital provides more than financing. We bring together the
+            strategic, technical, financial and operational capabilities
+            required to build enduring companies.
+          </p>
+          <Link
+            href="/contact#enquiry"
+            className="inline-flex items-center justify-center bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]"
+          >
+            Work with us
+          </Link>
 
-        <ImageWipe className="mt-10 h-full w-full"><Image
-          src="/capabilities/capabilities-hero.png"
-          alt="hero-img"
-          width={1120}
-          height={480}
-          className="w-full h-auto  rounded-xl"
-        /></ImageWipe>
-              </RevealItem>
-</main>
+          <ImageWipe className="mt-10 h-full w-full">
+            <Image
+              src="/capabilities/capabilities-hero.png"
+              alt="hero-img"
+              width={1120}
+              height={480}
+              className="w-full h-auto  rounded-xl"
+            />
+          </ImageWipe>
+        </RevealItem>
+      </main>
       <div className="bg-[#F8F7F5] lg:py-20 py-10">
         <div className="w-[90%] lg:w-[80%] mx-auto space-y-6 lg:space-y-12 lg:pb-20">
           {capabilities.map((capability) => (
@@ -193,19 +202,24 @@ export default function CapabilitiesPage() {
                       </div>
                     ))}
                   </div>
-                  <Link href="/contact#enquiry" className="inline-flex items-center justify-center bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
+                  <Link
+                    href="/contact#enquiry"
+                    className="inline-flex items-center justify-center bg-black text-white mt-6 text-[14px] py-2 px-4 rounded-full hover:bg-[#333]"
+                  >
                     Work with us
                   </Link>
                 </RevealItem>
               </div>
               <div className="lg:w-[50%]">
-                <ImageWipe className="h-full w-full"><Image
-                  src={capability.img}
-                  alt={capability.iconText}
-                  width={516}
-                  height={624}
-                  className="w-full lg:h-full h-64 object-cover"
-                /></ImageWipe>
+                <ImageWipe className="h-full w-full">
+                  <Image
+                    src={capability.img}
+                    alt={capability.iconText}
+                    width={516}
+                    height={624}
+                    className="w-full lg:h-full h-64 object-cover"
+                  />
+                </ImageWipe>
               </div>
             </div>
           ))}

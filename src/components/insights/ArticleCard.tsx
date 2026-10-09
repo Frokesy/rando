@@ -19,7 +19,7 @@ export default function ArticleCard({ article }: { article: Article }) {
       <div
         aria-hidden="true"
         data-page-media
-        className="absolute inset-0 -z-10 bg-cover bg-center transition-[transform,filter] duration-700 ease-out group-hover:scale-[1.04] group-hover:blur-[2px] motion-reduce:transform-none motion-reduce:transition-none"
+        className="absolute inset-0 -z-10 bg-cover bg-center scale-100 blur-none transition-[scale,transform,filter] duration-700 ease-out group-hover:scale-[1.04] group-hover:blur-[2px] motion-reduce:transform-none motion-reduce:transition-none"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.8)), url('${article.img}')`,
         }}

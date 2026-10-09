@@ -1502,3 +1502,56 @@ export const Radio = () => (
     />
   </svg>
 );
+
+export const CareersIcon = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12.3327 13.6667C12.1772 11.7123 10.5608 10.1651 8.53834 10.0347L7.99934 10C7.80681 10.0051 7.62741 10.0119 7.45814 10.0199C5.45351 10.1149 3.81994 11.7316 3.66602 13.6667"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      stroke="#636363"
+    />
+    <path
+      d="M10.1663 6.16667C10.1663 7.36327 9.19626 8.33333 7.99966 8.33333C6.80306 8.33333 5.83301 7.36327 5.83301 6.16667C5.83301 4.97005 6.80306 4 7.99966 4C9.19626 4 10.1663 4.97005 10.1663 6.16667Z"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      stroke="#636363"
+    />
+    <path
+      d="M3.66873 5.66666C3.45313 5.32989 3.32812 4.92954 3.32812 4.49999C3.32812 3.30337 4.29817 2.33333 5.49479 2.33333C5.79209 2.33333 6.0754 2.39321 6.33333 2.50156"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      stroke="#636363"
+    />
+    <path
+      d="M12.3306 5.66666C12.5462 5.32989 12.6712 4.92954 12.6712 4.49999C12.6712 3.30337 11.7011 2.33333 10.5045 2.33333C10.2073 2.33333 9.92395 2.39321 9.66602 2.50156"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      stroke="#636363"
+    />
+    <path
+      d="M14.6675 11.9997C14.5475 10.4916 13.3333 9.00001 12 8.66667"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      stroke="#636363"
+    />
+    <path
+      d="M1.33301 11.9997C1.45298 10.4916 2.66715 9.00001 4.00049 8.66667"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      stroke="#636363"
+    />
+  </svg>
+);
