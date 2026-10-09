@@ -1,3 +1,5 @@
+import { externalLinks } from "@/config/external-links";
+import ConfiguredLink from "@/components/ConfiguredLink";
 import { pageMetadata } from "@/lib/page-metadata";
 import ImageWipe from "@/components/motion/ImageWipe";
 import Link from "next/link";
@@ -205,12 +207,12 @@ const Company = () => {
             <h2 className="font-semibold lg:text-[56px] text-[34px] lg:mt-0 mt-3">
               What Makes Us Different
             </h2>
-            <Link
-              href="/contact?category=partners#enquiry"
+            <ConfiguredLink
+              href={externalLinks.partnerWithUs}
               className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 rounded-full hover:bg-[#333]"
             >
               Partner with us
-            </Link>
+            </ConfiguredLink>
           </RevealItem>
 
           <div className="mt-10 grid grid-cols-1 gap-6 lg:mt-20 lg:grid-cols-6">

@@ -1,6 +1,7 @@
+import { externalLinks } from "@/config/external-links";
+import ConfiguredLink from "@/components/ConfiguredLink";
 import ImageWipe from "../motion/ImageWipe";
 import RevealItem from "../RevealItem";
-import Link from "next/link";
 import Image from "next/image";
 
 const PreFooter = () => {
@@ -22,12 +23,12 @@ const PreFooter = () => {
           building valuable and enduring businesses.
         </p>
         <div className="flex items-center space-x-4 lg:mt-10 mt-6">
-          <Link href="/contact?category=partners#enquiry" className="inline-flex items-center justify-center text-[14px] bg-black py-2 px-6 rounded-full text-white hover:bg-gray-800 transition-colors duration-200">
+          <ConfiguredLink href={externalLinks.partnerWithUs} className="inline-flex items-center justify-center text-[14px] bg-black py-2 px-6 rounded-full text-white hover:bg-gray-800 transition-colors duration-200">
             Partner with us
-          </Link>
-          <Link href="/contact?category=founders#enquiry" className="inline-flex items-center justify-center text-[14px] bg-inherit py-2 px-6 rounded-full border border-gray-300 text-black hover:bg-black hover:text-white transition-colors duration-200">
+          </ConfiguredLink>
+          <ConfiguredLink href={externalLinks.submitVenture} className="inline-flex items-center justify-center text-[14px] bg-inherit py-2 px-6 rounded-full border border-gray-300 text-black hover:bg-black hover:text-white transition-colors duration-200">
             Submit a venture
-          </Link>
+          </ConfiguredLink>
         </div>
       </RevealItem>
       <ImageWipe className="lg:w-[50%] w-full">

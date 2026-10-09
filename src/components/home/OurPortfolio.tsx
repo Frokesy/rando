@@ -1,3 +1,5 @@
+import { externalLinks } from "@/config/external-links";
+import ConfiguredLink from "@/components/ConfiguredLink";
 import Link from "next/link";
 import React from "react";
 import StaggerReveal from "../StaggerReveal";
@@ -156,9 +158,9 @@ const OurPortfolio = () => {
               </div>
             ))}
           </div>
-          <Link href="/contact?category=founders#enquiry" className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 mt-6 rounded-full hover:bg-[#333]">
+          <ConfiguredLink href={externalLinks.submitVenture} className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 mt-6 rounded-full hover:bg-[#333]">
             Build with us
-          </Link>
+          </ConfiguredLink>
         </div></RevealItem>
       </div>
     </StaggerReveal>

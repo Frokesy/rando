@@ -1,3 +1,5 @@
+import { externalLinks } from "@/config/external-links";
+import ConfiguredLink from "@/components/ConfiguredLink";
 import { pageMetadata } from "@/lib/page-metadata";
 import RevealItem from "@/components/RevealItem";
 import Link from "next/link";
@@ -101,9 +103,9 @@ const Contact = () => {
                 ))}
               </div>
               <div className="">
-                <Link href="/contact?category=founders#enquiry" className="inline-flex items-center justify-center bg-white text-black mt-6 text-[14px] py-2 px-4 rounded-full">
+                <ConfiguredLink href={externalLinks.submitVenture} className="inline-flex items-center justify-center bg-white text-black mt-6 text-[14px] py-2 px-4 rounded-full">
                   Submit a venture
-                </Link>
+                </ConfiguredLink>
               </div>
             </RevealItem>
 
@@ -141,9 +143,9 @@ const Contact = () => {
               </div>
 
               <div className="mt-auto pt-8">
-                <Link href="/contact?category=partners#enquiry" className="inline-flex items-center justify-center bg-white text-black mt-6 text-[14px]">
+                <ConfiguredLink href={externalLinks.partnerWithUs} className="inline-flex items-center justify-center bg-white text-black mt-6 text-[14px]">
                   Start a Conversation
-                </Link>
+                </ConfiguredLink>
               </div>
             </RevealItem>
 
@@ -161,9 +163,9 @@ const Contact = () => {
               </div>
 
               <div className="mt-auto pt-8">
-                <Link href="/contact?category=partners#enquiry" className="inline-flex items-center justify-center bg-white text-black mt-6 text-[14px]">
+                <ConfiguredLink href={externalLinks.partnerWithUs} className="inline-flex items-center justify-center bg-white text-black mt-6 text-[14px]">
                   Partner with Ark
-                </Link>
+                </ConfiguredLink>
               </div>
             </RevealItem>
           </div>

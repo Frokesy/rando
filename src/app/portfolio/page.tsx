@@ -3,7 +3,6 @@ import ImageWipe from "@/components/motion/ImageWipe";
 import RevealItem from "@/components/RevealItem";
 import ConfiguredLink from "@/components/ConfiguredLink";
 import { externalLinks } from "@/config/external-links";
-import Link from "next/link";
 import Footer from "@/components/defaults/Footer";
 import PreFooter from "@/components/defaults/PreFooter";
 import TopNav from "@/components/defaults/TopNav";
@@ -220,9 +219,9 @@ const PortfolioPage = () => {
               </div>
             ))}
           </div>
-          <Link href="/contact?category=founders#enquiry" className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 mt-6 rounded-full hover:bg-[#333]">
+          <ConfiguredLink href={externalLinks.submitVenture} className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 mt-6 rounded-full hover:bg-[#333]">
             Introduce your company
-          </Link>
+          </ConfiguredLink>
         </div>
       </div>
       <PreFooter />

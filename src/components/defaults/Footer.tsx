@@ -28,8 +28,8 @@ const Footer = () => {
                 Get in Touch
               </p>
               <Link href="/contact" className="text-white/55 text-[14px] hover:text-white">Contact</Link>
-              <Link href="/contact?category=partners#enquiry" className="text-white/55 text-[14px] hover:text-white">Partner with us</Link>
-              <Link href="/contact?category=founders#enquiry" className="text-white/55 text-[14px] hover:text-white">Submit a venture</Link>
+              <ConfiguredLink href={externalLinks.partnerWithUs} className="text-white/55 text-[14px] hover:text-white">Partner with us</ConfiguredLink>
+              <ConfiguredLink href={externalLinks.submitVenture} className="text-white/55 text-[14px] hover:text-white">Submit a venture</ConfiguredLink>
             </div>
             <div className="flex flex-col space-y-2">
               <p className="text-white text-[14px] font-semibold">Legal</p>

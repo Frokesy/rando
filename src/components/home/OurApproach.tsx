@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { externalLinks } from "@/config/external-links";
+import ConfiguredLink from "@/components/ConfiguredLink";
 import StaggerReveal from "../StaggerReveal";
 import RevealItem from "../RevealItem";
 import { ApproachIcon } from "../icons";
@@ -20,9 +21,9 @@ const OurApproach = () => {
             This approach allows us to understand each business from the inside
             and provide the support it genuinely needs.
           </p>
-          <Link href="/contact?category=founders#enquiry" className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
+          <ConfiguredLink href={externalLinks.submitVenture} className="inline-flex items-center justify-center bg-black text-white text-[14px] py-2 px-4 rounded-full hover:bg-[#333]">
             Submit a venture
-          </Link>
+          </ConfiguredLink>
         </RevealItem>
         <ApproachPanels />
       </StaggerReveal>
