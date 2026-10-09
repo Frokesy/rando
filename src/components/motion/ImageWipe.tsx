@@ -1,19 +1,42 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-import type { ReactNode } from "react";
+import { motion, useInView, useReducedMotion } from "framer-motion";
+import { useRef, type ReactNode } from "react";
 
-export default function ImageWipe({ children, className }: { children: ReactNode; className?: string }) {
+export default function ImageWipe({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+
+  const inView = useInView(containerRef, {
+    once: true,
+    amount: "some",
+    margin: "0px 0px 100px 0px",
+  });
+
   return (
-    <motion.div
-      className={className}
-      initial={{ clipPath: reducedMotion ? "inset(0% 0% 0% 0%)" : "inset(0% 0% 100% 0%)" }}
-      whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: reducedMotion ? 0 : 3, ease: [0.22, 1, 0.36, 1] }}
-    >
-      {children}
-    </motion.div>
+    <div ref={containerRef} className={className}>
+      <motion.div
+        className="relative h-full w-full"
+        initial={false}
+        animate={{
+          clipPath:
+            reducedMotion || inView
+              ? "inset(0% 0% 0% 0%)"
+              : "inset(0% 0% 100% 0%)",
+        }}
+        transition={{
+          duration: reducedMotion ? 0 : 3,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 }

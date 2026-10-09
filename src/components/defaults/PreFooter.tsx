@@ -33,6 +33,8 @@ const PreFooter = () => {
       <ImageWipe className="lg:w-[50%] w-full">
         <Image
           src="/prefooter.png"
+          loading="eager"
+          sizes="(min-width: 64rem) 40vw, 90vw"
           width={534}
           height={428}
           className="h-auto w-full"
